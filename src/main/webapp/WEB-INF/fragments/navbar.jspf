@@ -1,0 +1,106 @@
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark py-0">
+	<!-- 	<img id="img" src="/img/favicon.ico" style='height: 2%; width: 3%;' /> -->
+	<a class="nav-link" href="/home"><span class="sr-only">(current)</span>
+	</a> <a class="navbar-brand" href="/home"><i class="fas fa-home"></i>
+		SPRING BOOT ROCKS</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse"
+		data-target="#navbarCollapse" aria-controls="navbarCollapse"
+		aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarCollapse">
+		<sec:authorize
+			access="hasAuthority('ADMIN') or hasAuthority('EDITOR') or hasAuthority('VIEWER')">
+			<ul class="navbar-nav mr-auto">
+
+				<li class="nav-item active"><a class="nav-link" href="/landing">LandingPage
+						<span class="sr-only">(current)</span>
+				</a></li>
+				<li class="nav-item active"><a class="nav-link" href="/home">HomePage
+						<span class="sr-only">(current)</span>
+				</a></li>
+				<li class="nav-item active"><a class="nav-link" href="/welcome">ErrorPage
+						<span class="sr-only">(current)</span>
+				</a></li>
+				<li class="nav-item active"><a class="nav-link"
+					href="/userlist">UserList <span class="sr-only">(current)</span>
+				</a></li>
+				<li class="nav-item active"><a class="nav-link"
+					href="/userlist2">UserList2 <span class="sr-only">(current)</span>
+				</a></li>
+				<li class="nav-item active"><a class="nav-link"
+					href="/jdbc/userlist3">UserList3 <span class="sr-only">(current)</span>
+				</a></li>
+				<li class="nav-item active"><a class="nav-link"
+					href="/userlist4">UserList4 <span class="sr-only">(current)</span>
+				</a></li>
+				<li class="nav-item dropdown active"><a
+					class="nav-link dropdown-toggle" href="/" id="navbarDropdown"
+					role="button" data-toggle="dropdown" aria-haspopup="true"
+					aria-expanded="false">RESTful</a>
+					<div class="dropdown-menu btn-space"
+						aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="/api/findappuser/1">Find A User</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="/api/listappusers">List Users</a>
+						<div class="dropdown-divider"></div>
+						<h6 class="text-muted" href="#">Group1</h6>
+						<a class="dropdown-item" href="/"> Search </a> <a
+							class="dropdown-item" href="/"> Delegate</a> <a
+							class="dropdown-item" href="/"> Messages</a>
+						<h6 class="text-muted" href="/">Reports</h6>
+						<a class="dropdown-item" href="/"> This Month</a> <a
+							class="dropdown-item" href="/"> Last quarter</a> <a
+							class="dropdown-item" href="/"> Yearly </a>
+					</div></li>
+				<li><div class="btn-group">
+						<button type="button"
+							class="btn btn-sm btn-secondary dropdown-toggle btn-space"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<i class="fas fa-cog"> Actions</i>
+						</button>
+						<div class="dropdown-menu btn-space">
+							<a class="dropdown-item" href="/userlist">Manage Users</a> <a
+								class="dropdown-item" href="#">More Actions</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="#">And Some More</a>
+						</div>
+					</div></li>
+				<!--<div class="dropdown dropleft"> -->
+				<div class="dropdown">
+					<button class="btn btn-sm btn-secondary dropdown-toggle btn-space"
+						type="button" id="dropdownMenuButton" data-toggle="dropdown"
+						aria-haspopup="true" aria-expanded="false">
+						<i class="fas fa-user-cog"> Themes</i>
+					</button>
+					<div class="dropdown-menu btn-space"
+						aria-labelledby="dropdownMenuButton">
+						<a class="dropdown-item" href="?theme=default">Default</a> <a
+							class="dropdown-item" href="?theme=cerulean">Cerulean</a> <a
+							class="dropdown-item" href="?theme=cosmo">Cosmo</a> <a
+							class="dropdown-item" href="?theme=flat">Flat</a> <a
+							class="dropdown-item" href="?theme=journal">Journal</a> <a
+							class="dropdown-item" href="?theme=litera">Litera</a> <a
+							class="dropdown-item" href="?theme=pulse">Pulse</a> <a
+							class="dropdown-item" href="?theme=spacelab">Spacelab</a> <a
+							class="dropdown-item" href="?theme=yeti">Yeti</a> <a
+							class="dropdown-item" href="?theme=lumen">Lumen</a> <a
+							class="dropdown-item" href="?theme=materia">Materia</a> <a
+							class="dropdown-item" href="?theme=minty">Minty</a> <a
+							class="dropdown-item" href="?theme=sandstone">Sandstone</a> <a
+							class="dropdown-item" href="?theme=simplex">Simplex</a>
+					</div>
+				</div>
+			</ul>
+
+
+			<a href="${contextPath}/logout"
+				class="btn btn-sm btn-danger btn-rounded" role="button"
+				aria-pressed="true"><i class="fas fa-sign-out-alt"> </i></a>
+			<!-- 		<button type="button" class="btn btn-sm btn-danger"> -->
+			<!-- 			<i class="fas fa-sign-out-alt"></i> Logout -->
+			<!-- 		</button> -->
+		</sec:authorize>
+	</div>
+
+</nav>

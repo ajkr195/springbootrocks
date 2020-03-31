@@ -1,0 +1,219 @@
+nav {
+	height: 35px;
+	font-size: .8em !important;
+}
+
+.navbar-brand {
+	font-size: 1.2em !important;
+}
+
+body {
+	margin-top: 30px;
+	margin-bottom: 40px;
+	padding-top: 20px;
+}
+
+thead {
+	height: 10px !important;
+	font-size: 12px;
+}
+
+tfoot {
+	height: 10px !important;
+	font-size: 12px;
+}
+
+.pull-left {
+	margin-left: -20px; /* Try with different values until you are happy */
+}
+
+.form-group {
+	margin-bottom: 6px;
+	margin-top: 6px;
+}
+
+input.form-control {
+	height: 25px !important;
+}
+
+input.myform-control {
+	height: 40px !important;
+}
+
+span.error {
+	color: red;
+	margin-left: 0px;
+	font-size: 14px;
+}
+
+.btn-space {
+	margin-right: 5px;
+	margin-left: 5px;
+	font-size:12px
+}
+
+.btn-reduced {
+	font-size:10px
+}
+
+.btn-somespace {
+	margin-right: 3px;
+	margin-left: 3px;
+}
+
+.btn-supersmall {
+	padding: 1px 1px;
+	font-size: 10px;
+	/*     border-radius: 10px; */
+}
+
+/* .btn-sm { */
+/* 	border-radius: 0px; */
+/* 	-webkit-border-radius: 0px; */
+/* 	-moz-border-radius: 0px; */
+/* } */
+.btn-rounded {
+	border-radius: 50%;
+	box-shadow: none;
+	font-size: 12px;
+}
+
+/* datatable paging size changed*/
+.dataTables_paginate>span>a {
+	margin-bottom: 0px !important;
+	padding: 1px 5px !important;
+}
+
+/* datatable paging size changed*/
+.dataTables_paginate>a {
+	margin-bottom: 0px !important;
+	padding: 1px 5px !important;
+}
+
+.jumbo {
+	padding: 5px;
+}
+
+.jumbotron {
+	border-style: solid;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	background-color: transparent !important;
+}
+
+.form-control:focus {
+	border-color: #cccccc;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	/* Set the fixed height of the footer here */
+	height: 25px; */
+	line-height: 20px;
+	background-color: #f5f5f5;
+}
+
+.control-label {
+	padding-top: 6px;
+}
+
+.alert-custom {
+	margin-top: 1px;
+  margin-bottom: 1px;
+}
+
+.p-label {
+	padding-top: 6px;
+}
+
+.dropdown-menu>a:hover {
+	/* 	background-color: #33BEFF; #5cb85c */
+	/* 	background-color: #F3F694  #90EE90  #b3ff99 */
+	background-color: #33BEFF;
+	text-decoration: none;
+}
+
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+	/* 	background-color: #33BEFF; */
+	/* 		background-color: #F3F694 */
+	/* 	background-color: #b3ff99; */
+	/* 	padding: 10px; */
+	/* 	font-size: 18px; */
+	font-weight: bold;
+}
+
+.table_morecondensed>thead>tr>th, .table_morecondensed>tbody>tr>th,
+	.table_morecondensed>tfoot>tr>th, .table_morecondensed>thead>tr>td,
+	.table_morecondensed>tbody>tr>td, .table_morecondensed>tfoot>tr>td {
+	padding: 1px;
+	font-size: auto;
+}
+
+th {
+	background-color: gray;
+	color: white;
+}
+
+.dropdown-thin a {
+	height: 25px;
+	padding-top: 2px;
+}
+
+.modal-header {
+	padding: 1px 25px;
+	border-bottom: 2px solid gray;
+	background-color: #d9534f;
+	color: white;
+}
+
+.close {
+	margin: 0;
+	position: absolute;
+	top: -10px;
+	right: -10px;
+	width: 23px;
+	height: 23px;
+	border-radius: 23px;
+	background-color: #00aeef;
+	color: #ffe300;
+	font-size: 10px;
+	opacity: 100;
+	z-index: 10;
+}
+
+.close-icon {
+	margin: 0;
+	position: absolute;
+	display: block;
+	box-sizing: border-box;
+	top: -10px;
+	right: -10px;
+	width: 25px;
+	height: 25px;
+	border-width: 3px;
+	border-style: solid;
+	border-color: red;
+	border-radius: 100%;
+	background: -webkit-linear-gradient(-45deg, transparent 0%, transparent 46%, white
+		46%, white 56%, transparent 56%, transparent 100%),
+		-webkit-linear-gradient(45deg, transparent 0%, transparent 46%, white
+		46%, white 56%, transparent 56%, transparent 100%);
+	background-color: red;
+	box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.5);
+	transition: all 0.3s ease;
+	z-index: 10;
+}
+
+.rotated {
+	transform: rotate(360deg);
+	-ms-transform: rotate(360deg); /* IE 9 */
+	-moz-transform: rotate(360deg); /* Firefox */
+	-webkit-transform: rotate(360deg); /* Safari and Chrome */
+	-o-transform: rotate(360deg); /* Opera */
+}
