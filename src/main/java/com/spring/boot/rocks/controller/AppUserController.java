@@ -108,6 +108,13 @@ public class AppUserController {
 		model.addAttribute("users", users);
 		return "userlist";
 	}
+	
+	@RequestMapping(value = { "usersearchignorecase" }, method = RequestMethod.GET)
+	public String findByUsernameIgnoreCase(@RequestParam("userName") String username, ModelMap model) {
+		List<AppUser> users = appUserJPARepository.findByUsernameIgnoreCaseContaining(username);
+		model.addAttribute("users", users);
+		return "userlist";
+	}
 
 	@RequestMapping(value = { "userlist2" }, method = RequestMethod.GET, produces = "text/html")
 	public String showuserList(@RequestParam("pageSize") Optional<Integer> pageSize,

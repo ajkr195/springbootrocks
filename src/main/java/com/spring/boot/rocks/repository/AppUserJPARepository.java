@@ -14,5 +14,9 @@ public interface AppUserJPARepository extends JpaRepository<AppUser, Long> {
 	
 	@Query("SELECT u FROM AppUser u WHERE u.username LIKE %:username%")
 	  List<AppUser> findByUsernameLike(String username);
-
+	
+//	List<AppUser> findByUsernameIgnoreCase(String username);
+	
+	List<AppUser> findByUsernameIgnoreCaseContaining(String username);
+	
 }

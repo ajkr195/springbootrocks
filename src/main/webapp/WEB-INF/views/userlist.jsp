@@ -66,7 +66,19 @@
 					<div class="row">
 						<div class="input-group">
 							<label class="font-weight-bold text-right"
-								for="userName">Search User:</label> <input type="text"
+								for="userName">Search User (case-sensitive):</label> <input type="text"
+								class="form-control form-control-sm" name="userName"
+								id="userName" /> <span class="input-group-btn">
+								<button class="btn btn-sm btn-danger btn-rounded" id="showButton">Go</button>
+							</span>
+						</div>
+					</div>
+				</form>
+				<form action="usersearchignorecase">
+					<div class="row">
+						<div class="input-group">
+							<label class="font-weight-bold text-right"
+								for="userName">Search User (case-insensitive):</label> <input type="text"
 								class="form-control form-control-sm" name="userName"
 								id="userName" /> <span class="input-group-btn">
 								<button class="btn btn-sm btn-danger btn-rounded" id="showButton">Go</button>
