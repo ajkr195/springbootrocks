@@ -53,11 +53,6 @@ UI using Bootstrap, Popper, Jquery, Font Awesome, Datatable
 
 ![springbootrocks](https://github.com/ajkr195/springbootrocks/blob/master/screenshots/table1.jpg)
 
-<h4> Table1 Search </h4>
-
-![springbootrocks](https://github.com/ajkr195/springbootrocks/blob/master/screenshots/search.jpg)
-
-
 <h4> Table2 </h4>
 
 ![springbootrocks](https://github.com/ajkr195/springbootrocks/blob/master/screenshots/table2.jpg)
