@@ -51,7 +51,15 @@ UI using Bootstrap, Popper, Jquery, Font Awesome, Datatable
 
 <h4> Table1 </h4>
 
-![springbootrocks](https://github.com/ajkr195/springbootrocks/blob/master/screenshots/table1.jpg)
+![springbootrocks](https://github.com/ajkr195/springbootrocks/blob/master/screenshots/table.jpg)
+
+<h4> HighChart </h4>
+
+![springbootrocks](https://github.com/ajkr195/springbootrocks/blob/master/screenshots/chart1.jpg)
+
+<h4> Chart Options </h4>
+
+![springbootrocks](https://github.com/ajkr195/springbootrocks/blob/master/screenshots/chart2.jpg)
 
 <h4> Table2 </h4>
 
