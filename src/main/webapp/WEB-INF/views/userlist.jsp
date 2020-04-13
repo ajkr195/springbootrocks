@@ -11,7 +11,7 @@
 </head>
 <body>
 <!-- 		<div class="container-fluid"> -->
-	<div class="container">
+	<div class="container"> 
 		<!-- 		<div class="card-header bg-info text-white p-0"> -->
 		<hr />
 		<div class="d-flex align-items-center justify-content-center">
