@@ -3,8 +3,15 @@ package com.spring.boot.rocks.controller;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.Period;
+import java.time.ZoneId;
 import java.util.Calendar;
+import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 import java.util.Optional;
@@ -88,8 +95,7 @@ public class AppUserController {
 //		return "redirect:userlist";
 		return "home";
 	}
-	
-	
+
 	@RequestMapping(value = { "home" }, method = RequestMethod.GET)
 	public String home(Model model) {
 		return "home";
@@ -101,14 +107,60 @@ public class AppUserController {
 		model.addAttribute("users", users);
 		return "userlist";
 	}
-	
+
+	@RequestMapping(value = { "userlistbycreatedate" }, method = RequestMethod.GET)
+	public String listUsersByCreateDate(@RequestParam("createDate") String createDate, ModelMap model)
+			throws ParseException {
+
+		DateFormat df2 = new SimpleDateFormat("yyyy-MM-dd");
+		Date date1 = df2.parse(createDate);
+//		System.out.println("Date: " + date1);
+//		System.out.println("Date in dd-MM-yyyy HH:mm:ss format is: " + df2.format(date1));
+
+//	    DateFormat df2 = new SimpleDateFormat("dd-MM-yyyy");
+
+		List<AppUser> users = appUserJPARepository.findByUserdatecreated(date1);
+		for (AppUser u : users) {
+//			System.out.println("    >>>>>>>>>>>>>>          " + u.getUsername());
+			System.out.println("Created Year    >>>>>>>>>>>>>>          " + getYear(u.getUserdatecreated()));
+		}
+		model.addAttribute("users", users);
+		return "userlist";
+	}
+
+	@RequestMapping(value = { "userlistbycreatedateage" }, method = RequestMethod.GET)
+	public String listUsersBycreatedateage(ModelMap model) {
+		List<AppUser> users = appUserService.findAllUsers();
+
+		Date date = new Date();
+		LocalDate localDate = date.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+		int currentyear  = localDate.getYear();
+		int month = localDate.getMonthValue();
+		int day   = localDate.getDayOfMonth();
+		
+		System.out.println("Current Year is - "+currentyear);
+		
+		
+		
+		HashMap<String, Integer> userlistmap = new HashMap<>();
+		
+		for (AppUser u : users) {
+			userlistmap.put(u.getUserfirstname() + " " + u.getUserlastname(), currentyear - getYear(u.getUserdatecreated())); 
+		}
+		
+		
+
+		model.addAttribute("users", userlistmap);
+		return "userlistbyage";
+	}
+
 	@RequestMapping(value = { "usersearch" }, method = RequestMethod.GET)
 	public String findByUsernameLike(@RequestParam("userName") String username, ModelMap model) {
 		List<AppUser> users = appUserJPARepository.findByUsernameLike(username);
 		model.addAttribute("users", users);
 		return "userlist";
 	}
-	
+
 	@RequestMapping(value = { "usersearchignorecase" }, method = RequestMethod.GET)
 	public String findByUsernameIgnoreCase(@RequestParam("userName") String username, ModelMap model) {
 		List<AppUser> users = appUserJPARepository.findByUsernameIgnoreCaseContaining(username);
@@ -269,7 +321,8 @@ public class AppUserController {
 				+ "<p class=\"p-label col-sm-8 pull-left\" id=\"roles\">"
 				+ userForm.getRoles().toString().replace("AppRole [id=", "").replace("1, name=", "")
 						.replace("2, name=", "").replace("3, name=", "").replace("[", "").replace("]", "")
-						.replace("]]", "")+ "</p>\n" + "						</div>"
+						.replace("]]", "")
+				+ "</p>\n" + "						</div>"
 
 				+ "</p>\n</div><hr/>");
 		return "success";
@@ -455,6 +508,49 @@ public class AppUserController {
 		simpleDateFormat.setTimeZone(mytimeZone);
 		String setTimeStamp = simpleDateFormat.format(calendar.getTime());
 		return setTimeStamp;
+	}
+
+	private int getAge(String dobString) {
+
+		Date date = null;
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+		try {
+			date = sdf.parse(dobString);
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+
+		if (date == null)
+			return 0;
+
+		Calendar dob = Calendar.getInstance();
+		Calendar today = Calendar.getInstance();
+
+		dob.setTime(date);
+
+		int year = dob.get(Calendar.YEAR);
+		int month = dob.get(Calendar.MONTH);
+		int day = dob.get(Calendar.DAY_OF_MONTH);
+
+		dob.set(year, month + 1, day);
+
+		int age = today.get(Calendar.YEAR) - dob.get(Calendar.YEAR);
+
+		if (today.get(Calendar.DAY_OF_YEAR) < dob.get(Calendar.DAY_OF_YEAR)) {
+			age--;
+		}
+
+		return age;
+	}
+
+	public int getYear(Date date) {
+		// Date date = new Date();
+		LocalDate localDate = date.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+		int year = localDate.getYear();
+		// int month = localDate.getMonthValue();
+		// int day = localDate.getDayOfMonth();
+		// System.out.println("Current Year is - " + year);
+		return year;
 	}
 
 }

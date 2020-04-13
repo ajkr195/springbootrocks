@@ -1,19 +1,17 @@
 package com.spring.boot.rocks.service;
 
-import java.awt.print.Book;
+import java.time.LocalDate;
+import java.time.ZoneId;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import javax.persistence.TypedQuery;
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.persistence.criteria.CriteriaQuery;
-import javax.persistence.criteria.Predicate;
-import javax.persistence.criteria.Root;
 import javax.xml.bind.annotation.XmlElement;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -34,11 +32,15 @@ public class AppUserServiceImpl implements AppUserService {
 		user.setUsername(user.getUsername());
 		user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
 		user.setRoles(user.getRoles());
-		
+
 		user.setUseremail(user.getUseremail());
 		user.setUserfirstname(user.getUserfirstname());
 		user.setUserlastname(user.getUserlastname());
 		user.setUseraddress(user.getUseraddress());
+		user.setUsercreatedby(SecurityContextHolder.getContext().getAuthentication().getName());
+		user.setUserdatecreated(new Date());
+		user.setUsermodifiedby(null);
+		user.setUserdatemodified(null);
 		System.out.println("\n%%%%%%%%%%%      Adding New User.... " + user.getUsername() + "     %%%%%%%%%%%%%\n");
 		appUserJPARepository.save(user);
 	}
@@ -61,7 +63,7 @@ public class AppUserServiceImpl implements AppUserService {
 		appUserJPARepository.findAll().forEach(e -> list.add(e));
 		return list;
 	}
-	
+
 	@Override
 	public void updateUser(AppUser user) {
 		AppUser entity = appUserJPARepository.findById(user.getId()).orElse(null);
@@ -76,7 +78,10 @@ public class AppUserServiceImpl implements AppUserService {
 			entity.setUserlastname(user.getUserlastname());
 			entity.setUseraddress(user.getUseraddress());
 			entity.setRoles(user.getRoles());
-			
+//			entity.setUsercreatedby(entity.getUsercreatedby());
+//			entity.setUserdatecreated(entity.getUserdatecreated());
+			entity.setUsermodifiedby(SecurityContextHolder.getContext().getAuthentication().getName());
+			entity.setUserdatemodified(new Date());
 
 		}
 		appUserJPARepository.save(entity);
@@ -88,7 +93,7 @@ public class AppUserServiceImpl implements AppUserService {
 		appUserJPARepository.delete(findByUsername(username));
 
 	}
-	
+
 	@Override
 	public List<Map<String, Object>> jasperhtmlreport() {
 		List<Map<String, Object>> result = new ArrayList<Map<String, Object>>();
@@ -105,6 +110,14 @@ public class AppUserServiceImpl implements AppUserService {
 		return result;
 	}
 
-	
+	public int getYear(Date date) {
+		//Date date = new Date();
+		LocalDate localDate = date.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+		int year = localDate.getYear();
+		//int month = localDate.getMonthValue();
+		//int day   = localDate.getDayOfMonth();
+		//System.out.println("Current Year is - " + year);
+		return year;
+	}
 
 }

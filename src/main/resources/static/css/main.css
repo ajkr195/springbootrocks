@@ -18,6 +18,11 @@ thead {
 	font-size: 12px;
 }
 
+table {
+	height: 10px !important;
+	font-size: 12px;
+}
+
 tfoot {
 	height: 10px !important;
 	font-size: 12px;
@@ -75,7 +80,7 @@ span.error {
 .btn-rounded {
 	border-radius: 50%;
 	box-shadow: none;
-	font-size: 12px;
+	font-size: 10px;
 }
 
 /* datatable paging size changed*/
@@ -152,7 +157,6 @@ span.error {
 	.table_morecondensed>tfoot>tr>th, .table_morecondensed>thead>tr>td,
 	.table_morecondensed>tbody>tr>td, .table_morecondensed>tfoot>tr>td {
 	padding: 1px;
-	font-size: auto;
 }
 
 th {

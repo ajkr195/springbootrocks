@@ -7,17 +7,19 @@
 <head>
 <title>SpringBootRocks</title>
 <%@ include file="../fragments/header.jspf"%>
+<link rel="stylesheet"
+	href="https://code.highcharts.com/css/highcharts.css" />
 <%@ include file="../fragments/navbar.jspf"%>
 </head>
 <body>
-<!-- 		<div class="container-fluid"> -->
+	<!-- 		<div class="container-fluid"> -->
 	<div class="container">
 		<!-- 		<div class="card-header bg-info text-white p-0"> -->
 		<hr />
 		<div class="d-flex align-items-center justify-content-center">
 			<div style="text-align: center">
 				<h2>
-					<b>Manage Users</b>
+					<b>Users by Date Created (Created Since - in Years)</b>
 				</h2>
 				<h6>
 					<b>Spring Data With Zero Config Datatable</b>
@@ -61,43 +63,6 @@
 							class="fa fa-file" aria-hidden="true"></i></a>
 					</sec:authorize>
 				</div>
-				<br>
-				<form action="usersearch">
-					<div class="row">
-						<div class="input-group">
-							<label class="font-weight-bold text-right"
-								for="userName">Search User by Username (case-sensitive):</label> <input type="text"
-								class="form-control form-control-sm" name="userName"
-								id="userName" /> <span class="input-group-btn">
-								<button class="btn btn-sm btn-danger btn-rounded" id="showButton">Go</button>
-							</span>
-						</div>
-					</div>
-				</form>
-				<form action="usersearchignorecase">
-					<div class="row">
-						<div class="input-group">
-							<label class="font-weight-bold text-right"
-								for="userName">Search User by Username (case-insensitive):</label> <input type="text"
-								class="form-control form-control-sm" name="userName"
-								id="userName" /> <span class="input-group-btn">
-								<button class="btn btn-sm btn-danger btn-rounded" id="showButton">Go</button>
-							</span>
-						</div>
-					</div>
-				</form>
-				<form action="userlistbycreatedate">
-					<div class="row">
-						<div class="input-group">
-							<label class="font-weight-bold text-right"
-								for="createDate">Search User (created on or before):</label> <input type="date"
-								class="form-control form-control-sm" name="createDate"
-								id="createDate" required="required"/> <span class="input-group-btn">
-								<button class="btn btn-sm btn-danger btn-rounded" id="showButton">Go</button>
-							</span>
-						</div>
-					</div>
-				</form>
 			</div>
 		</div>
 		<hr />
@@ -108,118 +73,16 @@
 			<thead class="thead-secondary">
 				<!-- 			<thead class="thead-dark"> -->
 				<tr>
-					<th><sec:authorize
-							access="hasAuthority('ADMIN') or hasAuthority('EDITOR') or hasAuthority('VIEWER')">ID</sec:authorize></th>
 					<th>UserName</th>
-					<th>Email-Id</th>
-					<th>First Name</th>
-					<th>Last Name</th>
-					<th>Address</th>
-					<th>Date Created</th>
-					<th>Created By</th>
-					<th>Last Modified</th>
-					<th>Modified By</th>
-<!-- 					<th>Roles</th> -->
-					<th><sec:authorize
-							access="hasAuthority('ADMIN') or hasAuthority('DBA')">
-						</sec:authorize> <sec:authorize access="hasAuthority('ADMIN')">
-						</sec:authorize>Actions</th>
+					<th>No. of Years</th>
 				</tr>
 			</thead>
 
 			<tbody>
 				<c:forEach items="${users}" var="user">
 					<tr>
-						<%--<td>${user.id}</td> --%>
-						<td><sec:authorize
-								access="hasAuthority('ADMIN') or hasAuthority('EDITOR') or hasAuthority('VIEWER')">
-								<a href="<c:url value='/view-user-${user.username}' />"
-									title="View Details"
-									class="btn btn-supersmall btn-secondary viewBtn"
-									data-toggle="modal" data-target="#viewUserDetailsModal"
-									data-userid="${user.id}" data-username="${user.username}"
-									data-useremail="${user.useremail}"
-									data-userfirstname="${user.userfirstname}"
-									data-userlastname="${user.userlastname}"
-									data-useraddress="${user.useraddress}"
-									data-userroles="${user.roles}">${user.id}</a>
-							</sec:authorize></td>
-						<td><sec:authorize
-								access="hasAuthority('ADMIN') or hasAuthority('EDITOR') or hasAuthority('VIEWER')">
-								<a href="<c:url value='/view-user-${user.username}' />"
-									title="View Details" class="viewBtn" data-toggle="modal"
-									data-target="#viewUserDetailsModal" data-userid="${user.id}"
-									data-username="${user.username}"
-									data-useremail="${user.useremail}"
-									data-userfirstname="${user.userfirstname}"
-									data-userlastname="${user.userlastname}"
-									data-useraddress="${user.useraddress}"
-									data-userroles="${user.roles}">${user.username}</a>
-							</sec:authorize></td>
-						<%--<td>${user.username}</td> --%>
-						<td>${user.useremail}</td>
-						<td>${user.userfirstname}</td>
-						<td>${user.userlastname}</td>
-						<td>${user.userdatecreated}</td>
-						<td>${user.usercreatedby}</td>
-						<td>${user.userdatemodified}</td>
-						<td>${user.usermodifiedby}</td>
-						<td>${user.useraddress}</td>
-<%-- 						<td><c:forEach items="${user.roles}" var="list"> --%>
-<%-- 						${list.name} <br> --%>
-<%-- 						</c:forEach></td> --%>
-						<td><div class="btn-group btn-somespace">
-								<sec:authorize
-									access="hasAuthority('ADMIN') or hasAuthority('EDITOR') or hasAuthority('VIEWER')">
-
-									<a href="<c:url value='/export-user-json-${user.username}'  />"
-										target="_blank" title="Export to JSON"><i
-										class="btn-somespace fab fa-js" style="color: green;"></i></a>
-								</sec:authorize>
-								<sec:authorize
-									access="hasAuthority('ADMIN') or hasAuthority('EDITOR') or hasAuthority('VIEWER')">
-									<a href="<c:url value='/export-user-pdf-${user.username}' />"
-										target="_blank" title="Export to PDF/BarCode"><i
-										class="btn-somespace fas fa-file-pdf" style="color: red;"></i></a>
-								</sec:authorize>
-								<sec:authorize
-									access="hasAuthority('ADMIN') or hasAuthority('EDITOR') or hasAuthority('VIEWER')">
-									<a href="<c:url value='/export-user-csv-${user.username}' />"
-										target="_blank" title="Export to CSV"><i
-										class="btn-somespace fas fa-file-csv" style="color: green;"></i></a>
-								</sec:authorize>
-								<sec:authorize
-									access="hasAuthority('ADMIN') or hasAuthority('EDITOR') or hasAuthority('VIEWER')">
-									<a href="<c:url value='/export-user-xml-${user.username}' />"
-										target="_blank" title="Export to XML"><i
-										class="btn-somespace fas fa-code" style="color: brown;"></i></a>
-								</sec:authorize>
-								<%-- <sec:authorize --%>
-								<%-- access="hasAuthority('ADMIN') or hasAuthority('EDITOR') or hasAuthority('VIEWER')"> --%>
-								<%-- 	<a href="<c:url value='/view-user-${user.username}' />" --%>
-								<!-- title="View Details" class="viewBtn" data-toggle="modal" -->
-								<%-- data-target="#viewUserDetailsModal" data-userid="${user.id}" --%>
-								<%-- data-username="${user.username}" --%>
-								<%-- data-useremail="${user.useremail}" --%>
-								<%-- data-userfirstname="${user.userfirstname}" --%>
-								<%-- data-userlastname="${user.userlastname}" --%>
-								<%-- data-useraddress="${user.useraddress}" --%>
-								<%-- data-userroles="${user.roles}"><i --%>
-								<!-- class="btn-somespace fas fa-user" style="color: gray;"></i></a> -->
-								<%-- </sec:authorize> --%>
-								<sec:authorize
-									access="hasAuthority('ADMIN') or hasAuthority('EDITOR')">
-									<a href="<c:url value='/edit-user-${user.username}' />"><i
-										title="Edit" class="btn-somespace fas fa-pencil-alt"
-										style="color: gray;"></i></a>
-								</sec:authorize>
-								<sec:authorize access="hasAuthority('ADMIN')">
-									<a href="<c:url value='/delete-user-${user.username}' />"
-										title="Delete" class="delBtn"><span
-										class="btn-somespace fas fa-trash-alt" style="color: red;"></span></a>
-									<!-- class="btn btn-sm btn-danger btn-rounded delBtn" -->
-								</sec:authorize>
-							</div></td>
+						<td>${user.key}</td>
+						<td>${user.value}</td>
 					</tr>
 				</c:forEach>
 			</tbody>
@@ -327,17 +190,76 @@
 		</div>
 	</div>
 
+	<!--  <div align="center"> -->
+	<!--         <h2>Users Registered Since</h2> -->
+	<!--     </div> -->
+	<figure class="highcharts-figure">
+		<div id="container-bar"></div>
+	</figure>
+
+
+
+
+
 
 </body>
 <%@ include file="../fragments/footer.jspf"%>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$.ajax({
+			url : "/api/get-data",
+			success : function(result) {
+				var yearDtls = [];
+				var countDtls = [];
+				console.log(result);
+				Object.keys(result).forEach(function(key) {
+					yearDtls.push(key);
+					countDtls.push(result[key]);
+				});
+				drawChart(yearDtls, countDtls);
+			}
+		});
+	});
+
+	function drawChart(year, viewCounts) {
+		Highcharts.chart('container-bar', {
+			chart : {
+				type : 'column',
+				styledMode : true
+			},
+			title : {
+				text : 'Users Registered Since'
+			},
+			xAxis : [ {
+				title : {
+					text : 'User Names'
+				},
+				categories : year
+			} ],
+			yAxis : [ {
+				className : 'highcharts-color-0',
+				title : {
+					text : 'Years Since Registered'
+				}
+			} ],
+			series : [ {
+				data : viewCounts
+			} ]
+		});
+	}
+</script>
 <script type="text/javascript">
 	$(document).ready(
 			function() {
 
 				$('#tableitems').DataTable(
 						{
-							"lengthMenu" : [ [ 5, 7, 10, 25, 50, 100, -1 ],
-									[ 5, 7, 10, 25, 50, 100, "All" ] ]
+							"lengthMenu" : [ [ 3, 5, 7, 10, 25, 50, 100, -1 ],
+									[ 3, 5, 7, 10, 25, 50, 100, "All" ] ]
 						});
 
 				$('#viewUserDetailsModal').on(
