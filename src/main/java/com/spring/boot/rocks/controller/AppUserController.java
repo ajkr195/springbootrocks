@@ -7,7 +7,7 @@ import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
-import java.time.Period;
+//import java.time.Period;
 import java.time.ZoneId;
 import java.util.Calendar;
 import java.util.Date;
@@ -111,19 +111,16 @@ public class AppUserController {
 	@RequestMapping(value = { "userlistbycreatedate" }, method = RequestMethod.GET)
 	public String listUsersByCreateDate(@RequestParam("createDate") String createDate, ModelMap model)
 			throws ParseException {
-
 		DateFormat df2 = new SimpleDateFormat("yyyy-MM-dd");
 		Date date1 = df2.parse(createDate);
 //		System.out.println("Date: " + date1);
 //		System.out.println("Date in dd-MM-yyyy HH:mm:ss format is: " + df2.format(date1));
-
 //	    DateFormat df2 = new SimpleDateFormat("dd-MM-yyyy");
-
 		List<AppUser> users = appUserJPARepository.findByUserdatecreated(date1);
-		for (AppUser u : users) {
+//		for (AppUser u : users) {
 //			System.out.println("    >>>>>>>>>>>>>>          " + u.getUsername());
-			System.out.println("Created Year    >>>>>>>>>>>>>>          " + getYear(u.getUserdatecreated()));
-		}
+//			System.out.println("Created Year    >>>>>>>>>>>>>>          " + getYear(u.getUserdatecreated()));
+//		}
 		model.addAttribute("users", users);
 		return "userlist";
 	}
@@ -131,25 +128,17 @@ public class AppUserController {
 	@RequestMapping(value = { "userlistbycreatedateage" }, method = RequestMethod.GET)
 	public String listUsersBycreatedateage(ModelMap model) {
 		List<AppUser> users = appUserService.findAllUsers();
-
 		Date date = new Date();
 		LocalDate localDate = date.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
-		int currentyear  = localDate.getYear();
-		int month = localDate.getMonthValue();
-		int day   = localDate.getDayOfMonth();
-		
-		System.out.println("Current Year is - "+currentyear);
-		
-		
-		
+		int currentyear = localDate.getYear();
+//		int month = localDate.getMonthValue();
+//		int day   = localDate.getDayOfMonth();
+//		System.out.println("Current Year is - "+currentyear);
 		HashMap<String, Integer> userlistmap = new HashMap<>();
-		
 		for (AppUser u : users) {
-			userlistmap.put(u.getUserfirstname() + " " + u.getUserlastname(), currentyear - getYear(u.getUserdatecreated())); 
+			userlistmap.put(u.getUserfirstname() + " " + u.getUserlastname(),
+					currentyear - getYear(u.getUserdatecreated()));
 		}
-		
-		
-
 		model.addAttribute("users", userlistmap);
 		return "userlistbyage";
 	}
@@ -510,8 +499,8 @@ public class AppUserController {
 		return setTimeStamp;
 	}
 
+	@SuppressWarnings("unused")
 	private int getAge(String dobString) {
-
 		Date date = null;
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 		try {
@@ -519,27 +508,19 @@ public class AppUserController {
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}
-
 		if (date == null)
 			return 0;
-
 		Calendar dob = Calendar.getInstance();
 		Calendar today = Calendar.getInstance();
-
 		dob.setTime(date);
-
 		int year = dob.get(Calendar.YEAR);
 		int month = dob.get(Calendar.MONTH);
 		int day = dob.get(Calendar.DAY_OF_MONTH);
-
 		dob.set(year, month + 1, day);
-
 		int age = today.get(Calendar.YEAR) - dob.get(Calendar.YEAR);
-
 		if (today.get(Calendar.DAY_OF_YEAR) < dob.get(Calendar.DAY_OF_YEAR)) {
 			age--;
 		}
-
 		return age;
 	}
 
