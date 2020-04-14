@@ -105,5 +105,3 @@ UI using Bootstrap, Popper, Jquery, Font Awesome, Datatable
 <h4> User Details </h4>
 
 ![springbootrocks](https://github.com/ajkr195/springbootrocks/blob/master/screenshots/userdetails.jpg)
-
-See it in action here - https://www.youtube.com/watch?v=cLMvxVMp8rA
