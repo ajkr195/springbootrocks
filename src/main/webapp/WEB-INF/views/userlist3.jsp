@@ -12,8 +12,6 @@
 <body>
 	<!-- 	<div class="container-fluid"> -->
 	<div class="container">
-		<!-- 		<div class="card-header bg-info text-white p-0"> -->
-		<hr />
 		<div style="text-align: center">
 			<h2>
 				<b>Manage Users</b>
@@ -61,8 +59,6 @@
 			</div>
 
 		</div>
-		<hr />
-		<!-- 		</div> -->
 		<table id="tableitems"
 			class="table table-condensed table-hover table-responsive-sm  table_morecondensed width=80%">
 			<thead class="thead-secondary">
@@ -91,7 +87,7 @@
 								access="hasAuthority('ADMIN') or hasAuthority('EDITOR') or hasAuthority('VIEWER')">
 								<a href="<c:url value='/view-user-${user.username}' />"
 									title="View Details"
-									class="btn btn-supersmall btn-secondary viewBtn"
+									class="btn btn-supersmall btn-warning viewBtn"
 									data-toggle="modal" data-target="#viewUserDetailsModal"
 									data-userid="${user.id}" data-username="${user.username}"
 									data-useremail="${user.useremail}"
@@ -170,7 +166,7 @@
 				</c:forEach>
 			</tbody>
 		</table>
-		<hr />
+		<br />
 	</div>
 
 	<!-- #Modal for removing users -->

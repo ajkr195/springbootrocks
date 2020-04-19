@@ -14,13 +14,9 @@
 		<div class="col-md-7">
 			<form:form method="POST" action="${contextPath}/login"
 				class="form-signin">
-				<!-- 					<div style="text-align: left" -->
-				<!-- 						class="card-header bg-default text-primary  p-0"> -->
-				<!-- 				<div style="text-align: center"><h1>Login</h1></div> -->
 				<h2>Login</h2>
-				<!-- 					</div> -->
 				<c:if test="${param.error != null}">
-					<div class="alert alert-danger">Invalid username and
+					<div class="alert alert-danger">Invalid username and/or
 						password.</div>
 				</c:if>
 				<c:if test="${param.logout != null}">
@@ -30,14 +26,15 @@
 				<div class="form-group">
 					<div class="form-group ${error != null ? 'has-error' : ''}">
 						<div class="form-group">
-							<i class="fa fa-user" style="color: gray;"></i><input name="username" type="text"
-								class="form-control myform-control" placeholder="Username"
-								autofocus="autofocus" />
+							<i class="fa fa-user" style="color: gray;"></i><input
+								name="username" type="text" class="form-control form-control-sm"
+								placeholder="Username" autofocus="autofocus" />
 						</div>
 					</div>
 					<div class="form-group">
-						<i class="fa fa-lock" style="color: red;"></i> <input name="password" type="password"
-							class="form-control myform-control" placeholder="Password" /> <input
+						<i class="fa fa-lock" style="color: red;"></i> <input
+							name="password" type="password"
+							class="form-control form-control-sm" placeholder="Password" /> <input
 							type="hidden" name="${_csrf.parameterName}"
 							value="${_csrf.token}" />
 					</div>
@@ -46,14 +43,13 @@
 							<i class="fas fa-sign-out-alt"></i> Log In
 						</button>
 					</div>
-					<br>
-					<!-- <div><input type="checkbox" name="remember-me">  Remember me on this Computer	</div>   -->
+					<br />
 					<div class="form-check">
 						<input class="form-check-input" type="checkbox" name="remember-me"
 							id="rememme"> <label class="form-check-label"
 							for="rememme"> Remember me on this Computer </label>
 					</div>
-					<br>
+					<br />
 					<div>
 						Not yet registered? <a href="${contextPath}/registration">Register
 							Here</a>
@@ -61,7 +57,7 @@
 				</div>
 			</form:form>
 		</div>
-		<hr />
+		<br />
 		<%@include file="../fragments/jumbotron.jspf"%>
 	</div>
 </body>

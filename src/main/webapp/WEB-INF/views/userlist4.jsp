@@ -10,9 +10,7 @@
 <%@ include file="../fragments/navbar.jspf"%>
 </head>
 <body>
-	<!-- 	<div class="container-fluid"> -->
 	<div class="container">
-		<hr />
 		<div style="text-align: center">
 			<h2>
 				<b>Manage Users</b>
@@ -60,7 +58,6 @@
 			</div>
 
 		</div>
-		<hr />
 		<table id="tableitems"
 			class="table table-condensed table-hover table-responsive-sm  table_morecondensed">
 			<thead class="thead-secondary">
@@ -71,6 +68,10 @@
 					<th>First Name</th>
 					<th>Last Name</th>
 					<th>Address</th>
+					<th>Date Created</th>
+					<th>Created By</th>
+					<th>Last Modified</th>
+					<th>Modified By</th>
 				</tr>
 			</thead>
 
@@ -82,11 +83,15 @@
 					<th>First Name</th>
 					<th>Last Name</th>
 					<th>Address</th>
+					<th>Date Created</th>
+					<th>Created By</th>
+					<th>Last Modified</th>
+					<th>Modified By</th>
 				</tr>
 			</tfoot>
 
 		</table>
-		<hr />
+		<br />
 	</div>
 </body>
 <%@ include file="../fragments/footer.jspf"%>

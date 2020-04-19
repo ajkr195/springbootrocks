@@ -15,7 +15,7 @@ body {
 
 thead {
 	height: 10px !important;
-	font-size: 12px;
+/* 	font-size: 12px; */
 }
 
 table {
@@ -32,18 +32,18 @@ tfoot {
 	margin-left: -20px; /* Try with different values until you are happy */
 }
 
-.form-group {
-	margin-bottom: 6px;
-	margin-top: 6px;
-}
+/* .form-group { */
+/* 	margin-bottom: 6px; */
+/* 	margin-top: 6px; */
+/* } */
 
-input.form-control {
-	height: 25px !important;
-}
+/* input.form-control { */
+/* 	height: 25px !important; */
+/* } */
 
-input.myform-control {
-	height: 40px !important;
-}
+/* input.myform-control { */
+/* 	height: 40px !important; */
+/* } */
 
 span.error {
 	color: red;
@@ -72,11 +72,11 @@ span.error {
 	/*     border-radius: 10px; */
 }
 
-/* .btn-sm { */
-/* 	border-radius: 0px; */
-/* 	-webkit-border-radius: 0px; */
-/* 	-moz-border-radius: 0px; */
-/* } */
+.btn-sm {
+	border-radius: 0px;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+}
 .btn-rounded {
 	border-radius: 50%;
 	box-shadow: none;
@@ -96,16 +96,13 @@ span.error {
 }
 
 .jumbo {
-	padding: 5px;
-}
-
-.jumbotron {
-	border-style: solid;
-	margin-bottom: 0px;
-	margin-left: 0px;
-	margin-right: 0px;
-	margin-top: 0px;
-	background-color: transparent !important;
+	padding: 15px;
+/* 	border-style: solid; */
+/* 	margin-bottom: 0px; */
+/* 	margin-left: 0px; */
+/* 	margin-right: 0px; */
+/* 	margin-top: 0px; */
+/* 	background-color: transparent !important; */
 }
 
 .form-control:focus {

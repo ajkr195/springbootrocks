@@ -12,8 +12,6 @@
 <body>
 	<!-- 	<div class="container-fluid"> -->
 	<div class="container">
-		<!-- 		<div class="card-header bg-info text-white p-0"> -->
-		<hr />
 		<div style="text-align: center">
 			<h2>
 				<b>Manage Users</b>
@@ -83,6 +81,10 @@
 					<th>First Name</th>
 					<th>Last Name</th>
 					<th>Address</th>
+					<th>Date Created</th>
+					<th>Created By</th>
+					<th>Last Modified</th>
+					<th>Modified By</th>
 					<!-- <th>Roles</th> -->
 					<th><sec:authorize
 							access="hasAuthority('ADMIN') or hasAuthority('DBA')">
@@ -99,7 +101,7 @@
 								access="hasAuthority('ADMIN') or hasAuthority('EDITOR') or hasAuthority('VIEWER')">
 								<a href="<c:url value='/view-user-${user.username}' />"
 									title="View Details"
-									class="btn btn-supersmall btn-secondary viewBtn"
+									class="btn btn-supersmall btn-danger viewBtn"
 									data-toggle="modal" data-target="#viewUserDetailsModal"
 									data-userid="${user.id}" data-username="${user.username}"
 									data-useremail="${user.useremail}"
@@ -125,6 +127,10 @@
 						<td>${user.userfirstname}</td>
 						<td>${user.userlastname}</td>
 						<td>${user.useraddress}</td>
+						<td>${user.userdatecreated}</td>
+						<td>${user.usercreatedby}</td>
+						<td>${user.userdatemodified}</td>
+						<td>${user.usermodifiedby}</td>
 						<%--<td><c:forEach items="${user.roles}" var="list"> --%>
 						<%--${list.name} <br> --%>
 						<%--</c:forEach></td> --%>

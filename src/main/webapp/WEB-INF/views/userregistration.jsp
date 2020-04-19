@@ -11,7 +11,6 @@
 </head>
 <body>
 	<div class="container">
-		<hr />
 		<div style="text-align: center">
 		<c:if test="${addnewuser}">
 			<h4>
@@ -39,11 +38,11 @@
 						<div class="form-group ${status.error ? 'has-error' : ''}">
 							<c:choose>
 								<c:when test="${edit}">
-									<form:input type="text" path="username" class="form-control"
+									<form:input type="text" path="username" class="form-control form-control-sm"
 										placeholder="Username" autofocus="true" disabled="true"></form:input>
 								</c:when>
 								<c:otherwise>
-									<form:input type="text" path="username" class="form-control"
+									<form:input type="text" path="username" class="form-control form-control-sm"
 										placeholder="Username" autofocus="true"></form:input>
 								</c:otherwise>
 							</c:choose>
@@ -58,7 +57,7 @@
 				<div class="col-md-7 pull-left">
 					<spring:bind path="password">
 						<div class="form-group ${status.error ? 'has-error' : ''}">
-							<form:input type="password" path="password" class="form-control"
+							<form:input type="password" path="password" class="form-control form-control-sm"
 								placeholder="Password"></form:input>
 							<form:errors path="password" cssClass="error"></form:errors>
 						</div>
@@ -73,7 +72,7 @@
 					<spring:bind path="passwordConfirm">
 						<div class="form-group ${status.error ? 'has-error' : ''}">
 							<form:input type="password" path="passwordConfirm"
-								class="form-control" placeholder="Confirm password"></form:input>
+								class="form-control form-control-sm" placeholder="Confirm password"></form:input>
 							<form:errors path="passwordConfirm" cssClass="error"></form:errors>
 						</div>
 					</spring:bind>
@@ -86,7 +85,7 @@
 				<div class="col-md-7 pull-left">
 					<spring:bind path="useremail">
 						<div class="form-group ${status.error ? 'has-error' : ''}">
-							<form:input type="text" path="useremail" class="form-control"
+							<form:input type="text" path="useremail" class="form-control form-control-sm"
 								placeholder="Email-id" autofocus="true"></form:input>
 							<form:errors path="useremail" cssClass="error"></form:errors>
 						</div>
@@ -100,7 +99,7 @@
 				<div class="col-md-7 pull-left">
 					<spring:bind path="userfirstname">
 						<div class="form-group ${status.error ? 'has-error' : ''}">
-							<form:input type="text" path="userfirstname" class="form-control"
+							<form:input type="text" path="userfirstname" class="form-control form-control-sm"
 								placeholder="First Name" autofocus="true"></form:input>
 							<form:errors path="userfirstname" cssClass="error"></form:errors>
 						</div>
@@ -114,7 +113,7 @@
 				<div class="col-md-7 pull-left">
 					<spring:bind path="userlastname">
 						<div class="form-group ${status.error ? 'has-error' : ''}">
-							<form:input type="text" path="userlastname" class="form-control"
+							<form:input type="text" path="userlastname" class="form-control form-control-sm"
 								placeholder="Last Name" autofocus="true"></form:input>
 							<form:errors path="userlastname" cssClass="error"></form:errors>
 						</div>
@@ -127,7 +126,7 @@
 				<div class="col-md-7 pull-left">
 					<spring:bind path="useraddress">
 						<div class="form-group ${status.error ? 'has-error' : ''}">
-							<form:input type="text" path="useraddress" class="form-control"
+							<form:input type="text" path="useraddress" class="form-control form-control-sm"
 								placeholder="Your Address" autofocus="true"></form:input>
 							<form:errors path="useraddress" cssClass="error"></form:errors>
 						</div>
@@ -138,11 +137,11 @@
 			<div class="row">
 				<label class="col-md-3 control-label text-right" for="roles">Roles
 					Available</label>
-				<div class="col-md-7 pull-left">
+				<div class="col-md-5 pull-left">
 					<spring:bind path="roles">
 						<form:select path="roles" items="${roles}" multiple="true"
 							itemValue="id" itemLabel="name"
-							class="form-control input-sm input-sm" />
+							class="form-control form-control-sm" />
 						<div class="has-error">
 							<form:errors path="roles" class="help-inline" cssClass="error" />
 						</div>
