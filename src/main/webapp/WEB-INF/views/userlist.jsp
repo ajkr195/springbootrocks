@@ -21,44 +21,44 @@
 					<b>Spring Data With Zero Config Datatable</b>
 				</h6>
 				<div style="text-align: center">
-					<button type="button" id="refreshButton"
-						class="btn btn-sm btn-secondary" title="Refresh Page">
-						<i class="fas fa-sync-alt"></i>
-					</button>
-					<sec:authorize access="hasAuthority('ADMIN')">
-						<a href="<c:url value='/registration' />"
-							class="btn btn-sm btn-success" title="Add New User"><span
-							class="fa fa-plus"></span></a>
-					</sec:authorize>
+				<button type="button" id="refreshButton"
+					class="btn btn-sm btn-secondary btn-rounded" title="Refresh Page">
+					<i class="fas fa-sync-alt"></i>
+				</button>
+				<sec:authorize access="hasAuthority('ADMIN')">
+					<a href="<c:url value='/registration' />"
+						class="btn btn-sm btn-success btn-rounded" title="Add New User"><span
+						class="fa fa-plus"></span></a>
+				</sec:authorize>
 
-					<sec:authorize access="hasAuthority('ADMIN')">
-						<a href="<c:url value='/alluserreportPDF'  />"
-							class="btn btn-sm btn-danger"
-							title="Export all to PDF" target="_blank"><i
-							class="fas fa-file-pdf"></i></a>
-					</sec:authorize>
-					<sec:authorize access="hasAuthority('ADMIN')">
-						<a href="<c:url value='/alluserreportCSV'  />"
-							class="btn btn-sm btn-success"
-							title="Export all to CSV"><i class="fas fa-file-code"></i></a>
-					</sec:authorize>
-					<sec:authorize access="hasAuthority('ADMIN')">
-						<a href="<c:url value='/alluserreportExcel'  />"
-							class="btn btn-sm btn-primary"
-							title="Export all to Excel"><i class="fas fa-file-excel"></i></a>
-					</sec:authorize>
-					<sec:authorize access="hasAuthority('ADMIN')">
-						<a href="<c:url value='/alluserreportJSON'  />"
-							class="btn btn-sm btn-secondary"
-							title="Export all to JSON" target="_blank"> { }</a>
-					</sec:authorize>
-					<sec:authorize access="hasAuthority('ADMIN')">
-						<a href="<c:url value='/jasper-HTMLEXPORT-report'  />"
-							class="btn btn-sm btn-warning"
-							title="Export all to JASPER" target="_blank"><i
-							class="fa fa-file" aria-hidden="true"></i></a>
-					</sec:authorize>
-				</div>
+				<sec:authorize access="hasAuthority('ADMIN')">
+					<a href="<c:url value='/alluserreportPDF'  />"
+						class="btn btn-sm btn-danger btn-rounded"
+						title="Export all to PDF" target="_blank"><i
+						class="fas fa-file-pdf"></i></a>
+				</sec:authorize>
+				<sec:authorize access="hasAuthority('ADMIN')">
+					<a href="<c:url value='/alluserreportCSV'  />"
+						class="btn btn-sm btn-success btn-rounded"
+						title="Export all to CSV"><i class="fas fa-file-code"></i></a>
+				</sec:authorize>
+				<sec:authorize access="hasAuthority('ADMIN')">
+					<a href="<c:url value='/alluserreportExcel'  />"
+						class="btn btn-sm btn-primary btn-rounded"
+						title="Export all to Excel"><i class="fas fa-file-excel"></i></a>
+				</sec:authorize>
+				<sec:authorize access="hasAuthority('ADMIN')">
+					<a href="<c:url value='/alluserreportJSON'  />"
+						class="btn btn-sm btn-secondary btn-rounded"
+						title="Export all to JSON" target="_blank"> { }</a>
+				</sec:authorize>
+				<sec:authorize access="hasAuthority('ADMIN')">
+					<a href="<c:url value='/jasper-HTMLEXPORT-report'  />"
+						class="btn btn-sm btn-warning btn-rounded"
+						title="Export all to JASPER" target="_blank"><i
+						class="fa fa-file" aria-hidden="true"></i></a>
+				</sec:authorize>
+			</div>
 				<br />
 				<form action="usersearch">
 					<div class="input-group">
@@ -174,31 +174,31 @@
 						<%-- 						<td><c:forEach items="${user.roles}" var="list"> --%>
 						<%-- 						${list.name} <br> --%>
 						<%-- 						</c:forEach></td> --%>
-						<td><div class="btn-group btn btn-sm">
+						<td><div class="btn-group btn-somespace">
 								<sec:authorize
 									access="hasAuthority('ADMIN') or hasAuthority('EDITOR') or hasAuthority('VIEWER')">
 
 									<a href="<c:url value='/export-user-json-${user.username}'  />"
 										target="_blank" title="Export to JSON"><i
-										class="btn btn-sm fab fa-js" style="color: green;"></i></a>
+										class="btn-somespace fab fa-js" style="color: green;"></i></a>
 								</sec:authorize>
 								<sec:authorize
 									access="hasAuthority('ADMIN') or hasAuthority('EDITOR') or hasAuthority('VIEWER')">
 									<a href="<c:url value='/export-user-pdf-${user.username}' />"
 										target="_blank" title="Export to PDF/BarCode"><i
-										class="btn btn-sm fas fa-file-pdf" style="color: red;"></i></a>
+										class="btn-somespace fas fa-file-pdf" style="color: red;"></i></a>
 								</sec:authorize>
 								<sec:authorize
 									access="hasAuthority('ADMIN') or hasAuthority('EDITOR') or hasAuthority('VIEWER')">
 									<a href="<c:url value='/export-user-csv-${user.username}' />"
 										target="_blank" title="Export to CSV"><i
-										class="btn btn-sm fas fa-file-csv" style="color: green;"></i></a>
+										class="btn-somespace fas fa-file-csv" style="color: green;"></i></a>
 								</sec:authorize>
 								<sec:authorize
 									access="hasAuthority('ADMIN') or hasAuthority('EDITOR') or hasAuthority('VIEWER')">
 									<a href="<c:url value='/export-user-xml-${user.username}' />"
 										target="_blank" title="Export to XML"><i
-										class="btn btn-sm fas fa-code" style="color: brown;"></i></a>
+										class="btn-somespace fas fa-code" style="color: brown;"></i></a>
 								</sec:authorize>
 								<%-- <sec:authorize --%>
 								<%-- access="hasAuthority('ADMIN') or hasAuthority('EDITOR') or hasAuthority('VIEWER')"> --%>
@@ -211,19 +211,19 @@
 								<%-- data-userlastname="${user.userlastname}" --%>
 								<%-- data-useraddress="${user.useraddress}" --%>
 								<%-- data-userroles="${user.roles}"><i --%>
-								<!-- class="btn btn-sm fas fa-user" style="color: gray;"></i></a> -->
+								<!-- class="btn-somespace fas fa-user" style="color: gray;"></i></a> -->
 								<%-- </sec:authorize> --%>
 								<sec:authorize
 									access="hasAuthority('ADMIN') or hasAuthority('EDITOR')">
 									<a href="<c:url value='/edit-user-${user.username}' />"><i
-										title="Edit" class="btn btn-sm fas fa-pencil-alt"
+										title="Edit" class="btn-somespace fas fa-pencil-alt"
 										style="color: gray;"></i></a>
 								</sec:authorize>
 								<sec:authorize access="hasAuthority('ADMIN')">
 									<a href="<c:url value='/delete-user-${user.username}' />"
 										title="Delete" class="delBtn"><span
-										class="btn btn-sm fas fa-trash-alt" style="color: red;"></span></a>
-									<!-- class="btn btn-sm btn-danger delBtn" -->
+										class="btn-somespace fas fa-trash-alt" style="color: red;"></span></a>
+									<!-- class="btn-somespace btn-danger delBtn" -->
 								</sec:authorize>
 							</div></td>
 					</tr>
@@ -244,7 +244,7 @@
 					<h5 class="modal-title" id="removeModalCenterTitle">User
 						Delete Warning !</h5>
 					<button type="button"
-						class="btn btn-sm btn-default close-icon pull-right"
+						class="btn-somespace btn-default close-icon pull-right"
 						data-dismiss="modal"></button>
 				</div>
 				<div class="modal-body">
@@ -252,9 +252,9 @@
 						rolled back.!</p>
 				</div>
 				<div class="modal-footer">
-					<a href="" class="btn btn-sm btn-secondary" id="delRef"><i
+					<a href="" class="btn-somespace btn-secondary" id="delRef"><i
 						class="fas fa-check"></i> Yes</a>
-					<button type="button" class="btn btn-sm btn-danger"
+					<button type="button" class="btn-somespace btn-danger"
 						data-dismiss="modal">
 						<i class="fas fa-times"> No</i>
 					</button>
@@ -274,7 +274,7 @@
 					<h5 class="col-12 modal-title text-center"
 						id="viewUserDetailsModalLabel"></h5>
 					<button type="button"
-						class="btn btn-sm btn-default close-icon pull-right"
+						class="btn-somespace btn-default close-icon pull-right"
 						data-dismiss="modal"></button>
 					<br> <br>
 				</div>
@@ -342,8 +342,8 @@
 
 				$('#tableitems').DataTable(
 						{
-							"lengthMenu" : [ [ 5, 7, 10, 25, 50, 100, -1 ],
-									[ 5, 7, 10, 25, 50, 100, "All" ] ]
+							"lengthMenu" : [ [ 7, 10, 25, 50, 100, -1 ],
+									[ 7, 10, 25, 50, 100, "All" ] ]
 						});
 
 				$('#viewUserDetailsModal').on(

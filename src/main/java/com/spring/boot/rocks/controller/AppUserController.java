@@ -163,8 +163,8 @@ public class AppUserController {
 
 		int BUTTONS_TO_SHOW = 9;
 		int INITIAL_PAGE = 0;
-		int INITIAL_PAGE_SIZE = 5;
-		int[] PAGE_SIZES = { 1, 5, 10, 15, 20, 25, 50, 100 };
+		int INITIAL_PAGE_SIZE = 7;
+		int[] PAGE_SIZES = { 1, 5, 7, 10, 15, 20, 25, 50, 100 };
 		int evalPageSize = pageSize.orElse(INITIAL_PAGE_SIZE);
 		int evalPage = (page.orElse(0) < 1) ? INITIAL_PAGE : page.get() - 1;
 

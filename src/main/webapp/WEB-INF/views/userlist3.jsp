@@ -279,8 +279,8 @@ $(document).ready(function() {
 	
 	$('#tableitems').DataTable(
 			{
-				"lengthMenu" : [ [ 5, 7, 10, 25, 50, 100, -1 ],
-						[ 5, 7, 10, 25, 50, 100, "All" ] ]
+				"lengthMenu" : [ [ 7, 10, 25, 50, 100, -1 ],
+						[ 7, 10, 25, 50, 100, "All" ] ]
 			});
 
 	$('#viewUserDetailsModal').on(

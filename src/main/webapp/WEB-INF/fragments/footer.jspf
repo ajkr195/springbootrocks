@@ -3,11 +3,12 @@
 <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 <script src="/webjars/datatables/js/jquery.dataTables.min.js"></script>
 
-<footer class="footer bg-dark text-white p-0">
+<footer class="footer bg-light p-0">
+<!-- <footer class="footer bg-dark text-white p-0"> -->
 		<div class="container ">
-			<span>Spring Boot. What else you are looking for?  | <a href="#"  style="color:yellowgreen;"><i class="far fa-copyright"></i>Copyright
-					Notice</a> | <a href="#" style="color:red;"><i class="fas fa-phone"></i> Contact us <i class="fas fa-comment"></i></a> | <a href="#" style="color:yellowgreen;">Know more
+			<span>Spring Boot Rocks <i class="far fa-copyright"> </i> | <a href="#" style="color:red;"><i class="fas fa-phone"></i> Contact us <i class="fas fa-comment"></i></a> | <a href="#" >Know more
 					about us</a></span>
+<!-- 					style="color:yellowgreen;" -->
 		</div>
 </footer>
 
