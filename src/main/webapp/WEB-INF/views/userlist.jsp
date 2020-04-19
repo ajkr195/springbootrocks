@@ -22,39 +22,39 @@
 				</h6>
 				<div style="text-align: center">
 				<button type="button" id="refreshButton"
-					class="btn btn-sm btn-secondary btn-rounded" title="Refresh Page">
+					class="btn btn-sm btn-secondary" title="Refresh Page">
 					<i class="fas fa-sync-alt"></i>
 				</button>
 				<sec:authorize access="hasAuthority('ADMIN')">
 					<a href="<c:url value='/registration' />"
-						class="btn btn-sm btn-success btn-rounded" title="Add New User"><span
+						class="btn btn-sm btn-success" title="Add New User"><span
 						class="fa fa-plus"></span></a>
 				</sec:authorize>
 
 				<sec:authorize access="hasAuthority('ADMIN')">
 					<a href="<c:url value='/alluserreportPDF'  />"
-						class="btn btn-sm btn-danger btn-rounded"
+						class="btn btn-sm btn-danger"
 						title="Export all to PDF" target="_blank"><i
 						class="fas fa-file-pdf"></i></a>
 				</sec:authorize>
 				<sec:authorize access="hasAuthority('ADMIN')">
 					<a href="<c:url value='/alluserreportCSV'  />"
-						class="btn btn-sm btn-success btn-rounded"
+						class="btn btn-sm btn-success"
 						title="Export all to CSV"><i class="fas fa-file-code"></i></a>
 				</sec:authorize>
 				<sec:authorize access="hasAuthority('ADMIN')">
 					<a href="<c:url value='/alluserreportExcel'  />"
-						class="btn btn-sm btn-primary btn-rounded"
+						class="btn btn-sm btn-primary"
 						title="Export all to Excel"><i class="fas fa-file-excel"></i></a>
 				</sec:authorize>
 				<sec:authorize access="hasAuthority('ADMIN')">
 					<a href="<c:url value='/alluserreportJSON'  />"
-						class="btn btn-sm btn-secondary btn-rounded"
+						class="btn btn-sm btn-secondary"
 						title="Export all to JSON" target="_blank"> { }</a>
 				</sec:authorize>
 				<sec:authorize access="hasAuthority('ADMIN')">
 					<a href="<c:url value='/jasper-HTMLEXPORT-report'  />"
-						class="btn btn-sm btn-warning btn-rounded"
+						class="btn btn-sm btn-warning"
 						title="Export all to JASPER" target="_blank"><i
 						class="fa fa-file" aria-hidden="true"></i></a>
 				</sec:authorize>
@@ -180,25 +180,25 @@
 
 									<a href="<c:url value='/export-user-json-${user.username}'  />"
 										target="_blank" title="Export to JSON"><i
-										class="btn-somespace fab fa-js" style="color: green;"></i></a>
+										class="btn btn-sm btn-outline-success fab fa-js"></i></a>
 								</sec:authorize>
 								<sec:authorize
 									access="hasAuthority('ADMIN') or hasAuthority('EDITOR') or hasAuthority('VIEWER')">
 									<a href="<c:url value='/export-user-pdf-${user.username}' />"
 										target="_blank" title="Export to PDF/BarCode"><i
-										class="btn-somespace fas fa-file-pdf" style="color: red;"></i></a>
+										class="btn btn-sm btn-outline-danger fas fa-file-pdf"></i></a>
 								</sec:authorize>
 								<sec:authorize
 									access="hasAuthority('ADMIN') or hasAuthority('EDITOR') or hasAuthority('VIEWER')">
 									<a href="<c:url value='/export-user-csv-${user.username}' />"
 										target="_blank" title="Export to CSV"><i
-										class="btn-somespace fas fa-file-csv" style="color: green;"></i></a>
+										class="btn btn-sm btn-outline-success fas fa-file-csv"></i></a>
 								</sec:authorize>
 								<sec:authorize
 									access="hasAuthority('ADMIN') or hasAuthority('EDITOR') or hasAuthority('VIEWER')">
 									<a href="<c:url value='/export-user-xml-${user.username}' />"
 										target="_blank" title="Export to XML"><i
-										class="btn-somespace fas fa-code" style="color: brown;"></i></a>
+										class="btn btn-sm btn-outline-success fas fa-code"></i></a>
 								</sec:authorize>
 								<%-- <sec:authorize --%>
 								<%-- access="hasAuthority('ADMIN') or hasAuthority('EDITOR') or hasAuthority('VIEWER')"> --%>
@@ -216,13 +216,12 @@
 								<sec:authorize
 									access="hasAuthority('ADMIN') or hasAuthority('EDITOR')">
 									<a href="<c:url value='/edit-user-${user.username}' />"><i
-										title="Edit" class="btn-somespace fas fa-pencil-alt"
-										style="color: gray;"></i></a>
+										title="Edit" class="btn btn-sm btn-outline-secondary fas fa-pencil-alt"></i></a>
 								</sec:authorize>
 								<sec:authorize access="hasAuthority('ADMIN')">
 									<a href="<c:url value='/delete-user-${user.username}' />"
 										title="Delete" class="delBtn"><span
-										class="btn-somespace fas fa-trash-alt" style="color: red;"></span></a>
+										class="btn btn-sm btn-outline-danger fas fa-trash-alt"></span></a>
 									<!-- class="btn-somespace btn-danger delBtn" -->
 								</sec:authorize>
 							</div></td>
