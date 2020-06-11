@@ -2,14 +2,6 @@
 
 Spring Boot 2.2.x Security Hibernate MySQL Boostrap Jquery FontAwesome Datatable
 
-THYMELEAFed "flashy" version of this project is available here :
-
-https://github.com/ajkr195/SpringBootFlashy
-
-For details, please visit: 
-
-https://abcdjavaee.blogspot.com/2018/05/spring-boot-security-data-jpa-hibernate.html
-
 # How to setup:
 
 Clone the project in your favorite IDE.
