@@ -10,6 +10,7 @@ public class App { // implements CommandLineRunner{
 	public static void main(String[] args) {
 		disableAccessWarnings();
 		SpringApplication.run(App.class, args);
+		System.err.println("\nUsername is - admin@admin\nPassword is - admin@admin");
 	}
 
 	@SuppressWarnings({ "unchecked", "rawtypes" })
