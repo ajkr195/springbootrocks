@@ -13,10 +13,10 @@
 		<sec:authorize
 			access="hasAuthority('ADMIN') or hasAuthority('EDITOR') or hasAuthority('VIEWER')">
 			<ul class="navbar-nav mr-auto">
-				<li class="nav-item active"><a class="nav-link" href="/home">HomePage
+				<li class="nav-item active"><a class="nav-link" href="/home">Home
 						<span class="sr-only">(current)</span>
 				</a></li>
-				<li class="nav-item active"><a class="nav-link" href="/welcome">ErrorPage
+				<li class="nav-item active"><a class="nav-link" href="/welcome">Error
 						<span class="sr-only">(current)</span>
 				</a></li>
 				<li class="nav-item active"><a class="nav-link"
@@ -30,6 +30,9 @@
 				</a></li>
 				<li class="nav-item active"><a class="nav-link"
 					href="/userlist4">UserList4 <span class="sr-only">(current)</span>
+				</a></li>
+				<li class="nav-item active"><a class="nav-link"
+					href="/userlist5">UserList5 <span class="sr-only">(current)</span>
 				</a></li>
 				<li class="nav-item active"><a class="nav-link"
 					href="/userlistbycreatedateage">UserListByCreateDate <span class="sr-only">(current)</span>

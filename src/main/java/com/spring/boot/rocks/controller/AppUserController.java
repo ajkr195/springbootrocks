@@ -107,6 +107,11 @@ public class AppUserController {
 		model.addAttribute("users", users);
 		return "userlist";
 	}
+	
+	@RequestMapping(value = { "userlist5" }, method = RequestMethod.GET)
+	public String listUsers5() {
+		return "userlist5";
+	}
 
 	@RequestMapping(value = { "userlistbycreatedate" }, method = RequestMethod.GET)
 	public String listUsersByCreateDate(@RequestParam("createDate") String createDate, ModelMap model)

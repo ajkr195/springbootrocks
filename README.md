@@ -70,6 +70,10 @@ UI using Bootstrap, Popper, Jquery, Font Awesome, Datatable
 
 ![springbootrocks](https://github.com/ajkr195/springbootrocks/blob/master/screenshots/ajaxtable.jpg)
 
+<h4> Table5 (DataTable Ajax Delete)</h4>
+
+![springbootrocks](https://github.com/ajkr195/springbootrocks/blob/master/screenshots/ajaxdelete.jpg)
+
 
 <h4> ErrorPage </h4>
 
