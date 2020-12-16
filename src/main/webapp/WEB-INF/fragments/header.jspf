@@ -5,9 +5,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
-<spring:theme code="stylesheet" var="themeName" />
-<link href='<spring:url value="/css/theme/${themeName}"/>' rel="stylesheet" />
-<!-- <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css" /> -->
+<link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css" />
 
 <link rel="stylesheet"
 	href="/webjars/datatables/css/jquery.dataTables.min.css">

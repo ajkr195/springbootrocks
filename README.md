@@ -80,10 +80,6 @@ UI using Bootstrap, Popper, Jquery, Font Awesome, Datatable
 ![springbootrocks](https://github.com/ajkr195/springbootrocks/blob/master/screenshots/errorpage.jpg)
 
 
-<h4> Themes </h4>
-
-![springbootrocks](https://github.com/ajkr195/springbootrocks/blob/master/screenshots/themes.jpg)
-
 <h4> Add New User </h4>
 
 ![springbootrocks](https://github.com/ajkr195/springbootrocks/blob/master/screenshots/addnewuser.jpg)

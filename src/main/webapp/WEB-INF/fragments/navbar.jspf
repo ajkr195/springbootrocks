@@ -70,30 +70,6 @@
 						</div>
 					</div></li>
 				<!--<div class="dropdown dropleft"> -->
-				<div class="dropdown">
-					<button class="btn btn-sm btn-secondary dropdown-toggle btn-space"
-						type="button" id="dropdownMenuButton" data-toggle="dropdown"
-						aria-haspopup="true" aria-expanded="false">
-						<i class="fas fa-user-cog"> Themes</i>
-					</button>
-					<div class="dropdown-menu btn-space"
-						aria-labelledby="dropdownMenuButton">
-						<a class="dropdown-item" href="?theme=default">Default</a> <a
-							class="dropdown-item" href="?theme=cerulean">Cerulean</a> <a
-							class="dropdown-item" href="?theme=cosmo">Cosmo</a> <a
-							class="dropdown-item" href="?theme=flat">Flat</a> <a
-							class="dropdown-item" href="?theme=journal">Journal</a> <a
-							class="dropdown-item" href="?theme=litera">Litera</a> <a
-							class="dropdown-item" href="?theme=pulse">Pulse</a> <a
-							class="dropdown-item" href="?theme=spacelab">Spacelab</a> <a
-							class="dropdown-item" href="?theme=yeti">Yeti</a> <a
-							class="dropdown-item" href="?theme=lumen">Lumen</a> <a
-							class="dropdown-item" href="?theme=materia">Materia</a> <a
-							class="dropdown-item" href="?theme=minty">Minty</a> <a
-							class="dropdown-item" href="?theme=sandstone">Sandstone</a> <a
-							class="dropdown-item" href="?theme=simplex">Simplex</a>
-					</div>
-				</div>
 			</ul>
 
 
