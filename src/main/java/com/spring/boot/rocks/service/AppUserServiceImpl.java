@@ -39,8 +39,8 @@ public class AppUserServiceImpl implements AppUserService {
 		user.setUseraddress(user.getUseraddress());
 		user.setUsercreatedby(SecurityContextHolder.getContext().getAuthentication().getName());
 		user.setUserdatecreated(new Date());
-		user.setUsermodifiedby(null);
-		user.setUserdatemodified(null);
+		user.setUsermodifiedby("System");
+		user.setUserdatemodified(new Date());
 		System.out.println("\n%%%%%%%%%%%      Adding New User.... " + user.getUsername() + "     %%%%%%%%%%%%%\n");
 		appUserJPARepository.save(user);
 	}
@@ -111,12 +111,12 @@ public class AppUserServiceImpl implements AppUserService {
 	}
 
 	public int getYear(Date date) {
-		//Date date = new Date();
+		// Date date = new Date();
 		LocalDate localDate = date.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
 		int year = localDate.getYear();
-		//int month = localDate.getMonthValue();
-		//int day   = localDate.getDayOfMonth();
-		//System.out.println("Current Year is - " + year);
+		// int month = localDate.getMonthValue();
+		// int day = localDate.getDayOfMonth();
+		// System.out.println("Current Year is - " + year);
 		return year;
 	}
 
