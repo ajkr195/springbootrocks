@@ -1,5 +1,7 @@
 # Spring Boot Rocks 
 
+For SpringBoot 3.x and Java17 upgrade , this project has new version here: https://github.com/ajkr195/ContentPlusPlus
+
 Spring Boot 2.x Security Hibernate MySQL Boostrap Jquery FontAwesome Datatable
 
 # How to setup:
