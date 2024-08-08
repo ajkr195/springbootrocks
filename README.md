@@ -2,7 +2,7 @@
 
 # New version coming soon with these features:
 
-Spring boot 3.4, Spring Data JPA, Spring Data REST, Open API, Bootstrap 5, Font Awesome 6, GridJS, Vanilla JS based Crud, HTMX demo
+Spring boot 3.4, Spring Data JPA, Spring Data REST, Spring Security, Open API, Bootstrap 5, Font Awesome 6, GridJS, Vanilla JS based Crud, HTMX demo
 
 # Current Stack: 
 
