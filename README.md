@@ -1,6 +1,10 @@
 # Spring Boot Rocks 
 
-For SpringBoot 3.x and Java17 upgrade , this project has new version here: https://github.com/ajkr195/ContentPlusPlus
+# New version coming soon with these features:
+
+Spring boot 3.4, Spring Data JPA, Spring Data REST, Open API, Bootstrap 5, Font Awesome 6, GridJS, Vanilla JS based Crud, HTMX demo
+
+# Current Stack: 
 
 Spring Boot 2.x Security Hibernate MySQL Boostrap Jquery FontAwesome Datatable
 
