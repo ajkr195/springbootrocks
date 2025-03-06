@@ -1,0 +1,75 @@
+INSERT INTO app_user (useremail, useruuid, userpassword, userfirstname, userlastname,userenabled,  created_by, created_date, modified_by, modified_date) VALUES ('admin@admin', random_uuid(), '$2a$10$kq8mcIw34jxCEHKEukfHs.PtvADISIhLUk29BtK0NZf8HK7fKdCqS', 'Ajay', 'Kumar', 1, 'System', LOCALTIMESTAMP, 'System', LOCALTIMESTAMP);   
+INSERT INTO app_user (useremail, useruuid, userpassword, userfirstname, userlastname,userenabled,  created_by, created_date, modified_by, modified_date) VALUES ('admin1@admin1', random_uuid(), '$2a$10$kq8mcIw34jxCEHKEukfHs.PtvADISIhLUk29BtK0NZf8HK7fKdCqS', 'admin1@admin1', 'admin1@admin1', 1, 'System', LOCALTIMESTAMP, 'System', LOCALTIMESTAMP);
+INSERT INTO app_user (useremail, useruuid, userpassword, userfirstname, userlastname,userenabled,  created_by, created_date, modified_by, modified_date) VALUES ('admin2@admin2', random_uuid(), '$2a$10$kq8mcIw34jxCEHKEukfHs.PtvADISIhLUk29BtK0NZf8HK7fKdCqS', 'admin2@admin2', 'admin2@admin2', 1, 'System', LOCALTIMESTAMP, 'System', LOCALTIMESTAMP);
+INSERT INTO app_user (useremail, useruuid, userpassword, userfirstname, userlastname,userenabled,  created_by, created_date, modified_by, modified_date) VALUES ('admin3@admin3', random_uuid(), '$2a$10$kq8mcIw34jxCEHKEukfHs.PtvADISIhLUk29BtK0NZf8HK7fKdCqS', 'admin3@admin3', 'admin3@admin3', 0, 'System', LOCALTIMESTAMP, 'System', LOCALTIMESTAMP);
+INSERT INTO app_user (useremail, useruuid, userpassword, userfirstname, userlastname,userenabled,  created_by, created_date, modified_by, modified_date) VALUES ('admin4@admin4', random_uuid(), '$2a$10$kq8mcIw34jxCEHKEukfHs.PtvADISIhLUk29BtK0NZf8HK7fKdCqS', 'admin4@admin4', 'admin4@admin4', 1, 'System', LOCALTIMESTAMP, 'System', LOCALTIMESTAMP);
+INSERT INTO app_user (useremail, useruuid, userpassword, userfirstname, userlastname,userenabled,  created_by, created_date, modified_by, modified_date) VALUES ('admin5@admin5', random_uuid(), '$2a$10$kq8mcIw34jxCEHKEukfHs.PtvADISIhLUk29BtK0NZf8HK7fKdCqS', 'admin5@admin5', 'admin5@admin5', 0, 'System', LOCALTIMESTAMP, 'System', LOCALTIMESTAMP);
+INSERT INTO app_user (useremail, useruuid, userpassword, userfirstname, userlastname,userenabled,  created_by, created_date, modified_by, modified_date) VALUES ('admin6@admin6', random_uuid(), '$2a$10$kq8mcIw34jxCEHKEukfHs.PtvADISIhLUk29BtK0NZf8HK7fKdCqS', 'admin6@admin6', 'admin6@admin6', 1, 'System', LOCALTIMESTAMP, 'System', LOCALTIMESTAMP);
+INSERT INTO app_user (useremail, useruuid, userpassword, userfirstname, userlastname,userenabled,  created_by, created_date, modified_by, modified_date) VALUES ('admin7@admin7', random_uuid(), '$2a$10$kq8mcIw34jxCEHKEukfHs.PtvADISIhLUk29BtK0NZf8HK7fKdCqS', 'admin7@admin7', 'admin7@admin7', 0, 'System', LOCALTIMESTAMP, 'System', LOCALTIMESTAMP);
+INSERT INTO app_user (useremail, useruuid, userpassword, userfirstname, userlastname,userenabled,  created_by, created_date, modified_by, modified_date) VALUES ('admin8@admin8', random_uuid(), '$2a$10$kq8mcIw34jxCEHKEukfHs.PtvADISIhLUk29BtK0NZf8HK7fKdCqS', 'admin8@admin8', 'admin8@admin8', 1, 'System', LOCALTIMESTAMP, 'System', LOCALTIMESTAMP);
+INSERT INTO app_user (useremail, useruuid, userpassword, userfirstname, userlastname,userenabled,  created_by, created_date, modified_by, modified_date) VALUES ('admin9@admin9', random_uuid(), '$2a$10$kq8mcIw34jxCEHKEukfHs.PtvADISIhLUk29BtK0NZf8HK7fKdCqS', 'admin9@admin9', 'admin9@admin9', 0, 'System', LOCALTIMESTAMP, 'System', LOCALTIMESTAMP);
+INSERT INTO app_user (useremail, useruuid, userpassword, userfirstname, userlastname,userenabled,  created_by, created_date, modified_by, modified_date) VALUES ('admin10@admin10', random_uuid(), '$2a$10$kq8mcIw34jxCEHKEukfHs.PtvADISIhLUk29BtK0NZf8HK7fKdCqS', 'admin10@admin10', 'admin10@admin10', 1, 'System', LOCALTIMESTAMP, 'System', LOCALTIMESTAMP);
+INSERT INTO app_user (useremail, useruuid, userpassword, userfirstname, userlastname,userenabled,  created_by, created_date, modified_by, modified_date) VALUES ('admin11@admin11', random_uuid(), '$2a$10$kq8mcIw34jxCEHKEukfHs.PtvADISIhLUk29BtK0NZf8HK7fKdCqS', 'admin11@admin11', 'admin11@admin11', 0, 'System', LOCALTIMESTAMP, 'System', LOCALTIMESTAMP);
+INSERT INTO app_user (useremail, useruuid, userpassword, userfirstname, userlastname,userenabled,  created_by, created_date, modified_by, modified_date) VALUES ('admin12@admin12', random_uuid(), '$2a$10$kq8mcIw34jxCEHKEukfHs.PtvADISIhLUk29BtK0NZf8HK7fKdCqS', 'admin12@admin12', 'admin12@admin12', 1, 'System', LOCALTIMESTAMP, 'System', LOCALTIMESTAMP);
+INSERT INTO app_user (useremail, useruuid, userpassword, userfirstname, userlastname,userenabled,  created_by, created_date, modified_by, modified_date) VALUES ('admin13@admin13', random_uuid(), '$2a$10$kq8mcIw34jxCEHKEukfHs.PtvADISIhLUk29BtK0NZf8HK7fKdCqS', 'admin13@admin13', 'admin13@admin13', 0, 'System', LOCALTIMESTAMP, 'System', LOCALTIMESTAMP);
+INSERT INTO app_user (useremail, useruuid, userpassword, userfirstname, userlastname,userenabled,  created_by, created_date, modified_by, modified_date) VALUES ('admin14@admin14', random_uuid(), '$2a$10$kq8mcIw34jxCEHKEukfHs.PtvADISIhLUk29BtK0NZf8HK7fKdCqS', 'admin14@admin14', 'admin14@admin14', 0, 'System', LOCALTIMESTAMP, 'System', LOCALTIMESTAMP);
+INSERT INTO app_user (useremail, useruuid, userpassword, userfirstname, userlastname,userenabled,  created_by, created_date, modified_by, modified_date) VALUES ('admin15@admin15', random_uuid(), '$2a$10$kq8mcIw34jxCEHKEukfHs.PtvADISIhLUk29BtK0NZf8HK7fKdCqS', 'admin15@admin15', 'admin15@admin15', 1, 'System', LOCALTIMESTAMP, 'System', LOCALTIMESTAMP);
+
+
+INSERT INTO app_role (name) VALUES ('ADMIN');
+INSERT INTO app_role (name) VALUES ('EDITOR');
+INSERT INTO app_role (name) VALUES ('USER');
+
+INSERT INTO app_user_role (userid, roleid) VALUES ('1', '1');
+INSERT INTO app_user_role (userid, roleid) VALUES ('1', '2');
+INSERT INTO app_user_role (userid, roleid) VALUES ('2', '2');
+INSERT INTO app_user_role (userid, roleid) VALUES ('3', '3');
+INSERT INTO app_user_role (userid, roleid) VALUES ('4', '3');
+INSERT INTO app_user_role (userid, roleid) VALUES ('5', '3');
+INSERT INTO app_user_role (userid, roleid) VALUES ('6', '3');
+INSERT INTO app_user_role (userid, roleid) VALUES ('7', '3');
+INSERT INTO app_user_role (userid, roleid) VALUES ('8', '3');
+INSERT INTO app_user_role (userid, roleid) VALUES ('9', '3');
+INSERT INTO app_user_role (userid, roleid) VALUES ('10', '3');
+INSERT INTO app_user_role (userid, roleid) VALUES ('11', '3');
+INSERT INTO app_user_role (userid, roleid) VALUES ('12', '3');
+INSERT INTO app_user_role (userid, roleid) VALUES ('13', '3');
+INSERT INTO app_user_role (userid, roleid) VALUES ('14', '3');
+INSERT INTO app_user_role (userid, roleid) VALUES ('15', '3');
+INSERT INTO app_user_role (userid, roleid) VALUES ('16', '3');
+
+INSERT INTO app_department (departmentname,  departmentheadname, departmentemaildistlist,  created_by, created_date, modified_by, modified_date, userid) VALUES ('Department1', 'Department1HeadName1', 'Department1Head1@email.com', 'System', LOCALTIMESTAMP, 'System', LOCALTIMESTAMP,1);
+INSERT INTO app_department (departmentname,  departmentheadname, departmentemaildistlist,  created_by, created_date, modified_by, modified_date, userid) VALUES ('Department2', 'Department2HeadName1', 'Department2Head2@email.com', 'System', LOCALTIMESTAMP, 'System', LOCALTIMESTAMP,2);
+INSERT INTO app_department (departmentname,  departmentheadname, departmentemaildistlist,  created_by, created_date, modified_by, modified_date, userid) VALUES ('Department3', 'Department3HeadName3', 'Department3Head3@email.com', 'System', LOCALTIMESTAMP, 'System', LOCALTIMESTAMP,3);
+INSERT INTO app_department (departmentname,  departmentheadname, departmentemaildistlist,  created_by, created_date, modified_by, modified_date, userid) VALUES ('Department4', 'Department4HeadName4', 'Department4Head4@email.com', 'System', LOCALTIMESTAMP, 'System', LOCALTIMESTAMP,4);
+INSERT INTO app_department (departmentname,  departmentheadname, departmentemaildistlist,  created_by, created_date, modified_by, modified_date, userid) VALUES ('Department5', 'Department5HeadName5', 'Department5Head5@email.com', 'System', LOCALTIMESTAMP, 'System', LOCALTIMESTAMP,5);
+INSERT INTO app_department (departmentname,  departmentheadname, departmentemaildistlist,  created_by, created_date, modified_by, modified_date, userid) VALUES ('Department6', 'Department6HeadName6', 'Department6Head1@email.com', 'System', LOCALTIMESTAMP, 'System', LOCALTIMESTAMP,6);
+INSERT INTO app_department (departmentname,  departmentheadname, departmentemaildistlist,  created_by, created_date, modified_by, modified_date, userid) VALUES ('Department7', 'Department7HeadName7', 'Department7Head7@email.com', 'System', LOCALTIMESTAMP, 'System', LOCALTIMESTAMP,7);
+INSERT INTO app_department (departmentname,  departmentheadname, departmentemaildistlist,  created_by, created_date, modified_by, modified_date, userid) VALUES ('Department8', 'Department8HeadName8', 'Department8Head8@email.com', 'System', LOCALTIMESTAMP, 'System', LOCALTIMESTAMP,8);
+INSERT INTO app_department (departmentname,  departmentheadname, departmentemaildistlist,  created_by, created_date, modified_by, modified_date, userid) VALUES ('Department9', 'Department9HeadName9', 'Department9Head9@email.com', 'System', LOCALTIMESTAMP, 'System', LOCALTIMESTAMP,9);
+INSERT INTO app_department (departmentname,  departmentheadname, departmentemaildistlist,  created_by, created_date, modified_by, modified_date, userid) VALUES ('Department10', 'Department10HeadName10', 'Department10Head10@email.com', 'System', LOCALTIMESTAMP, 'System', LOCALTIMESTAMP, 10);
+
+INSERT INTO app_user_department (userid, departmentid) VALUES ('1', '1');
+INSERT INTO app_user_department (userid, departmentid) VALUES ('1', '2');
+INSERT INTO app_user_department (userid, departmentid) VALUES ('2', '1');
+INSERT INTO app_user_department (userid, departmentid) VALUES ('2', '2');
+INSERT INTO app_user_department (userid, departmentid) VALUES ('3', '9');
+INSERT INTO app_user_department (userid, departmentid) VALUES ('4', '10');
+INSERT INTO app_user_department (userid, departmentid) VALUES ('5', '10');
+INSERT INTO app_user_department (userid, departmentid) VALUES ('6', '9');
+INSERT INTO app_user_department (userid, departmentid) VALUES ('7', '10');
+INSERT INTO app_user_department (userid, departmentid) VALUES ('8', '1');
+INSERT INTO app_user_department (userid, departmentid) VALUES ('9', '1');
+INSERT INTO app_user_department (userid, departmentid) VALUES ('10', '1');
+INSERT INTO app_user_department (userid, departmentid) VALUES ('11', '9');
+INSERT INTO app_user_department (userid, departmentid) VALUES ('11', '10');
+INSERT INTO app_user_department (userid, departmentid) VALUES ('12', '1');
+INSERT INTO app_user_department (userid, departmentid) VALUES ('12', '2');
+INSERT INTO app_user_department (userid, departmentid) VALUES ('13', '2');
+INSERT INTO app_user_department (userid, departmentid) VALUES ('13', '3');
+INSERT INTO app_user_department (userid, departmentid) VALUES ('14', '8');
+INSERT INTO app_user_department (userid, departmentid) VALUES ('14', '9');
+INSERT INTO app_user_department (userid, departmentid) VALUES ('15', '1');
+INSERT INTO app_user_department (userid, departmentid) VALUES ('15', '2');
+INSERT INTO app_user_department (userid, departmentid) VALUES ('16', '10');
+

@@ -1,0 +1,8 @@
+<th scope="col" th:fragment="sorting(field, label)">
+  <a th:href="@{'/listusers?' + ${keyword!=null && keyword!=''? 'keyword=' + keyword + '&' : ''}
+                + 'page=' + ${currentPage} + '&size=' + ${pageSize}
+                + ${sortField!=null ? '&sort=' + field + ',' + (sortField == field ? reverseSortDirection : sortDirection) : ''}}">
+    [[${label}]]<span th:if="${sortField == field}"
+    th:class="${sortDirection == 'asc' ? 'ri-sort-asc' : 'ri-sort-desc'}"></span> </a>
+  
+</th>

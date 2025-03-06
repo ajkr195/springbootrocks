@@ -1,0 +1,271 @@
+<!doctype html>
+
+<html lang="en" class="light-style layout-menu-fixed layout-compact" dir="ltr" data-theme="theme-default"
+	data-assets-path="../assets/" data-template="vertical-menu-template-free" data-style="light"
+	xmlns:th="http://www.thymeleaf.org">
+
+<div th:replace="~{fragments/head :: head}"></div>
+<style>
+	.message {
+		position: absolute;
+		top: 40px;
+		right: 5px;
+	}
+
+	.search {
+		position: relative;
+	}
+
+
+	.search button {
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		width: auto;
+		background: grey;
+	}
+
+	.size-select {
+		width: auto;
+		color: #495057;
+		vertical-align: middle;
+		padding: 6px 12px;
+		border: 1px solid #ced4da;
+		border-radius: 0.25rem;
+	}
+
+	.ri-sort-asc,.ri-sort-desc{
+		font-size: 2em;
+		color:crimson;
+	}
+</style>
+
+<body>
+
+	<div class="layout-wrapper layout-content-navbar">
+		<div class="layout-container">
+
+			<div th:replace="~{fragments/sidebar :: sidebar}"></div>
+
+			<div class="layout-page">
+
+
+				<div th:replace="~{fragments/header :: header}"></div>
+
+				<div class="content-wrapper">
+
+					<div class="container-fluid flex-grow-1 container-p-y">
+						<div class="row gy-6">
+
+							<div class="col-12">
+								<div class="card overflow-hidden">
+
+
+									<div class="my-3">
+										<form th:action="@{/listusers}" id="searchForm">
+											<div class="row d-flex container">
+
+												<div class="input-group input-group-merge">
+													<span class="input-group-text" id="basic-addon-search31"><i
+															class="ri-search-line ri-20px"></i></span>
+													<input type="text" class="form-control" aria-label="Search..."
+														aria-describedby="basic-addon-search31" id="keyword"
+														name="keyword" th:value="${keyword}" required
+														placeholder="Enter keyword" />
+													<button type="submit" class="btn btn-secondary">Search</button>
+
+													<label class="input-group-text" for="pageSize">Items per
+														page:</label>
+
+													<select form="searchForm" name="size" th:value="${pageSize}"
+														onchange="changePageSize()" class="size-select" id="pageSize">
+														<option th:each="s : ${ {10, 20, 50} }" th:value="${s}"
+															th:text="${s}" th:selected="${s == pageSize}"></option>
+													</select>
+													<button id="btnClear" class="btn btn-info mx-2"
+														onclick="clearSearchInput()">Clear</button>
+
+												</div>
+
+											</div>
+										</form>
+									</div>
+
+
+									<div class="table-responsive">
+										<table class="table table-sm">
+											<thead>
+												<tr>
+													<th th:replace="~{fragments/sorting :: sorting('id','Id')}"></th>
+
+													<th class="text-truncate">User</th>
+													<th class="text-truncate"
+														th:replace="~{fragments/sorting :: sorting('useremail','Email')}">
+													</th>
+													<th class="text-truncate">Role</th>
+													<th
+														th:replace="~{fragments/sorting :: sorting('userenabled','Status')}">
+													</th>
+													
+													<th  sec:authorize="hasAuthority('ADMIN')">Action</th>
+
+
+												</tr>
+											</thead>
+											<tbody>
+												<tr th:each="user: ${users}">
+													<td class="text-truncate" th:text="${user.id}">Id</td>
+													<td>
+														<div class="d-flex align-items-center">
+															<div class="avatar avatar-sm me-4">
+																<img th:src="@{/images/avatars/2.png}" alt="Avatar"
+																	class="rounded-circle" />
+															</div>
+
+															<div>
+																<h6 class="mb-0 text-truncate"
+																	th:text="${user.userfirstname} + ' ' + ${user.userlastname}">
+																</h6>
+
+																<small class="text-truncate">
+																	<th:block th:each="department: ${user.departments}">
+																		<span
+																			th:text="${department.departmentname +' (id:' + department.id + ') '}"></span>
+																	</th:block>
+																</small>
+															</div>
+														</div>
+													</td>
+													<td class="text-truncate" th:text="${user.useremail}">email</td>
+													<td class="text-truncate">
+														<div class="d-flex align-items-center">
+															<i class="ri-vip-crown-line ri-22px text-primary me-2"></i>
+															<span>
+																<th:block th:each="role: ${user.roles}">
+																	<span th:text="${role.id + ':' + role.name}"></span>
+																</th:block>
+															</span>
+														</div>
+													</td>
+													<td><span class="badge bg-label-success rounded-pill"
+															th:if="${user.userenabled}">Active</span><span
+															class="badge bg-label-danger rounded-pill"
+															th:if="${!user.userenabled}">InActive</span>
+													</td>
+													<td sec:authorize="hasAuthority('ADMIN')"><a class="dropdown text-primary" href="#" role="button"
+														data-bs-toggle="dropdown" aria-expanded="false">
+														<i class="ri-user-settings-line text-primary"></i>
+														<!--<i class="fa-solid fa-ellipsis-vertical"></i>-->
+														<ul class="dropdown-menu">
+															<li><a class="dropdown-item" href="#"
+																	th:onclick="showUserInfo([[${user}]]);"
+																	title="User Details"><i
+																		class="ri-information-line text-info mx-2"></i>
+																	Details</a></li>
+															<li><a class="dropdown-item" href="#"
+																	th:if="${! user.userenabled}"
+																	th:onclick="activateUser([[${user.id}]], this);"
+																	title="Activate this User"><i
+																		class="ri-user-follow-line text-success mx-2"></i>
+																	Activate</a></li>
+															<li><a class="dropdown-item" href="#"
+																	th:href="@{/adminuseredit/{id}(id=${user.id})}"
+																	title="Edit this user"><i
+																		class="ri-edit-box-line text-warning mx-2"></i>Edit
+																	User</a></li>
+															<li><a class="dropdown-item" href="#"
+																	th:if="${user.userenabled}"
+																	th:onclick="deActivateUser([[${user.id}]], this);"
+																	title="De-Activate this User"><i
+																		class="ri-user-unfollow-line text-danger mx-2"></i>
+																	De-Activate</a></li>
+
+															<!--li><a class="nav-item dropdown dropdown-item" href="#"
+																	th:onclick="deleteUser([[${user.id}]], this);"
+																	title="Delete this user"><i
+																		class="ri-delete-bin-line text-danger mx-2"></i>Delete</a>
+															</li-->
+														</ul>
+													</a>
+
+
+												</td>
+												</tr>
+
+											</tbody>
+										</table>
+
+										<nav aria-label="Pagination" th:if="${totalPages > 0}" class="d-flex align-items-center justify-content-center">
+											<ul class="pagination justify-content-center">
+												<li class="page-item" th:classappend="${currentPage == 1} ? 'disabled'">
+													<a
+														th:replace="~{fragments/paging :: paging(1, '<<', 'First Page')}"></a>
+												</li>
+												<li class="page-item font-weight-bold"
+													th:classappend="${currentPage == 1} ? 'disabled'">
+													<a
+														th:replace="~{fragments/paging :: paging(${currentPage - 1}, 'Prev', 'Previous Page')}"></a>
+												</li>
+												<li class="page-item disabled" th:if="${currentPage - 2 > 1}">
+													<a class="page-link" href="#">...</a>
+												</li>
+												<li class="page-item" th:classappend="${page == currentPage} ? 'active'"
+													th:each="page : ${#numbers.sequence(currentPage > 2 ? currentPage - 2 : 1, currentPage + 2 < totalPages ? currentPage + 2 : totalPages)}">
+													<a
+														th:replace="~{fragments/paging :: paging(${page}, ${page}, 'Page ' + ${page})}"></a>
+												</li>
+												<li class="page-item disabled" th:if="${currentPage + 2 < totalPages}">
+													<a class="page-link" href="#">...</a>
+												</li>
+												<li class="page-item font-weight-bold"
+													th:classappend="${currentPage == totalPages} ? 'disabled'">
+													<a
+														th:replace="~{fragments/paging :: paging(${currentPage + 1},'Next', 'Next Page')}"></a>
+												</li>
+												<li class="page-item"
+													th:classappend="${currentPage == totalPages} ? 'disabled'">
+													<a
+														th:replace="~{fragments/paging :: paging(${totalPages}, '>>', 'Last Page')}"></a>
+												</li>
+											</ul>
+										</nav>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+					<div th:replace="~{fragments/footer :: footer1}"></div>
+
+					<div class="content-backdrop fade"></div>
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="layout-overlay layout-menu-toggle"></div>
+
+	</div>
+
+	<div th:replace="~{fragments/jsimports :: jsimports}"></div>
+
+	<script>
+		function clearSearchInput() {
+			document.getElementById("keyword").value = '';
+			window.location = "[[@{/listusers}]]";
+		}
+	</script>
+
+	<script>
+		function changePageSize() {
+			var form = document.getElementById("searchForm");
+			form.submit();
+		}
+	</script>
+	<script type="text/javascript" th:src="@{/webjars/sweetalert2/dist/sweetalert2.all.min.js}"></script>
+	<script type="text/javascript" th:src="@{/js/userdata.js}"></script>
+</body>
+
+</html>

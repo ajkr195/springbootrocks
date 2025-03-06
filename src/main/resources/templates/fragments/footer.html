@@ -1,0 +1,24 @@
+<footer class="content-footer footer bg-footer-theme" th:fragment="footer1">
+	<div class="container-fluid">
+		<div class="footer-container d-flex align-items-center justify-content-between py-4 flex-md-row flex-column">
+			<div class="text-body mb-2 mb-md-0">
+				©
+				<script>
+					document.write(new Date().getFullYear());
+				</script>
+				, made with <span class="text-danger"><i class="tf-icons ri-heart-fill"></i></span>
+				by
+				<a href="/home" th:href="@{/home}" class="footer-link">SpringBootRocks</a>
+			</div>
+			<div class="d-none d-lg-inline-block">
+				<a href="/home" th:href="@{/home}" class="footer-link me-4">License</a>
+				<a href="/home" th:href="@{/home}" class="footer-link me-4">More
+					More</a>
+
+				<a href="/home" th:href="@{/home}" class="footer-link me-4">Documentation</a>
+
+				<a href="/home" th:href="@{/home}" class="footer-link">Support</a>
+			</div>
+		</div>
+	</div>
+</footer>
