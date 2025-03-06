@@ -1,18 +1,14 @@
 # Spring Boot Rocks 
 
-# New version coming soon with these features:
+# New version is here with these features:
 
-Spring boot 3.4, Spring Data JPA, Spring Data REST, Spring Security, Spring Scheduler, Open API, Bootstrap 5, Font Awesome 6, GridJS based Server side Search and pagination, Vanilla JS based Crud, HTMX demo
-
-# Current Stack: 
-
-Spring Boot 2.x Security Hibernate MySQL Boostrap Jquery FontAwesome Datatable
+Spring boot 3.4.2, Spring Data JPA, Spring Data REST, Spring Security, Bootstrap 5, RemixIcons, Server side Search and pagination.
 
 # How to setup:
 
 Clone the project in your favorite IDE.
 
-Run App.java as Spring Boot App.
+Run Application.java as Spring Boot App.
 
 # What we will accomplish:
 
@@ -28,82 +24,9 @@ CRUD Operations using Data JPA Hibernate
 
 Multiple versions of CRUD operation
   - Spring Data with Datatable
-  - Spring Data with server side Pagination with Datatable override options
-  - Spring JDBC Template with Datatable
-  - Spring Data AJAX (dynamic) html table
-
-Export entire list or individual list item to PDF (with QRCode, using itext) or Excel or Jasper Report or CSV or JSON
-
-Export entire list to Excel using poi
-
-Generate QR BarCode for records from Database and list items.
-
+  - Spring Data with server side Pagination
+  - Set / Edit Roles for users
+ 
 Form Validations
 
 UI using Bootstrap, Popper, Jquery, Font Awesome, Datatable
-
-
-<h4> Login </h4>
-
-![springbootrocks](https://github.com/ajkr195/springbootrocks/blob/master/screenshots/login.jpg)
-
-<h4> Home </h4>
-
-![springbootrocks](https://github.com/ajkr195/springbootrocks/blob/master/screenshots/home.jpg)
-
-<h4> Table1 </h4>
-
-![springbootrocks](https://github.com/ajkr195/springbootrocks/blob/master/screenshots/table.jpg)
-
-<h4> HighChart </h4>
-
-![springbootrocks](https://github.com/ajkr195/springbootrocks/blob/master/screenshots/chart1.jpg)
-
-<h4> Chart Options </h4>
-
-![springbootrocks](https://github.com/ajkr195/springbootrocks/blob/master/screenshots/chart2.jpg)
-
-<h4> Table2 </h4>
-
-![springbootrocks](https://github.com/ajkr195/springbootrocks/blob/master/screenshots/table2.jpg)
-
-
-<h4> Table3 </h4>
-
-![springbootrocks](https://github.com/ajkr195/springbootrocks/blob/master/screenshots/table3.jpg)
-
-<h4> Table4 </h4>
-
-![springbootrocks](https://github.com/ajkr195/springbootrocks/blob/master/screenshots/ajaxtable.jpg)
-
-<h4> Table5 (DataTable Ajax Delete)</h4>
-
-![springbootrocks](https://github.com/ajkr195/springbootrocks/blob/master/screenshots/ajaxdelete.jpg)
-
-
-<h4> ErrorPage </h4>
-
-![springbootrocks](https://github.com/ajkr195/springbootrocks/blob/master/screenshots/errorpage.jpg)
-
-
-<h4> Add New User </h4>
-
-![springbootrocks](https://github.com/ajkr195/springbootrocks/blob/master/screenshots/addnewuser.jpg)
-
-<h4> Validation </h4>
-
-![springbootrocks](https://github.com/ajkr195/springbootrocks/blob/master/screenshots/validation.jpg)
-
-<h4> Delete Confirmation </h4>
-
-![springbootrocks](https://github.com/ajkr195/springbootrocks/blob/master/screenshots/deleteconfirmation.jpg)
-
-
-<h4> Access Denied </h4>
-
-![springbootrocks](https://github.com/ajkr195/springbootrocks/blob/master/screenshots/accessdenied.jpg)
-
-
-<h4> User Details </h4>
-
-![springbootrocks](https://github.com/ajkr195/springbootrocks/blob/master/screenshots/userdetails.jpg)
