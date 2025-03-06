@@ -25,4 +25,5 @@ Multiple versions of CRUD operation
  
 Form Validations
 
-UI using Bootstrap, Popper, Jquery, Font Awesome, Datatable
+UI inspired from:
+https://github.com/themeselection/materio-bootstrap-html-admin-template-free
