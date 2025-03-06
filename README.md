@@ -32,14 +32,19 @@ https://github.com/themeselection/materio-bootstrap-html-admin-template-free
 
 ![springbootrocks](https://github.com/ajkr195/springbootrocks/blob/master/screenshots/Home.JPG)
 
-<h4> Edit/Update User</h4>
-![springbootrocks](https://github.com/ajkr195/springbootrocks/blob/master/screenshots/UpdateUser.JPG) 
+<h4> Edit/Update User </h4>
+
+![springbootrocks](https://github.com/ajkr195/springbootrocks/blob/master/screenshots/UpdateUser.JPG)
 
 <h4> Admin </h4>
-![springbootrocks] (https://github.com/ajkr195/springbootrocks/blob/master/screenshots/EditAsAdmin.JPG)
+
+![springbootrocks](https://github.com/ajkr195/springbootrocks/blob/master/screenshots/EditAsAdmin.JPG)
 
 <h4> Login </h4>
+
 ![springbootrocks](https://github.com/ajkr195/springbootrocks/blob/master/screenshots/Login.JPG)
 
 <h4> Register </h4>
+
 ![springbootrocks](https://github.com/ajkr195/springbootrocks/blob/master/screenshots/Register.JPG)
+
