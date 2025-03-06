@@ -16,10 +16,6 @@ User registration and User login
 
 User role selection at registration
 
-Spring Security
-
-Remember-me feature
-
 CRUD Operations using Data JPA Hibernate
 
 Multiple versions of CRUD operation
