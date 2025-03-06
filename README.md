@@ -27,3 +27,7 @@ Form Validations
 
 UI inspired from:
 https://github.com/themeselection/materio-bootstrap-html-admin-template-free
+
+<h4> Home </h4>
+
+![springbootrocks](https://github.com/ajkr195/springbootrocks/blob/master/screenshots/Home.JPG)
