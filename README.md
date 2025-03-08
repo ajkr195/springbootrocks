@@ -8,7 +8,7 @@ Spring boot 3.4.2, Spring Data JPA, Spring Data REST, Spring Security, Bootstrap
 
 Clone the project in your favorite IDE.
 
-Run Application.java as Spring Boot App.
+Run Application.java as Spring Boot App. Username is: admin@admin and password is admin@admin
 
 # What we will accomplish:
 
