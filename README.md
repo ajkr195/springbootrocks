@@ -2,7 +2,7 @@
 
 # New version is here with these features:
 
-Spring boot 3.4.2, Spring Data JPA, Spring Data REST, Spring Security, Bootstrap 5, SweetAlert2, RemixIcons, Server side Search and pagination and sorting.
+Spring boot 3.4.2, Spring Data JPA, Spring Data REST, Spring Security, Bootstrap 5, SweetAlert2, RemixIcons, Server side Search and pagination and sorting. 
 
 # How to setup:
 
@@ -22,8 +22,10 @@ Multiple versions of CRUD operation
   - Spring Data with Datatable
   - Spring Data with server side Pagination and sotring
   - Set / Edit Roles for users
+
+Custom 403 / 404 / 500 error pages.
  
-Form Validations
+Form Validations using messages from messages.properties files
 
 UI inspired from:
 https://github.com/themeselection/materio-bootstrap-html-admin-template-free

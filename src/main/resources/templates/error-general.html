@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html lang="en" class="light-style layout-wide customizer-hide" dir="ltr" data-theme="theme-default"
+	data-template="vertical-menu-template-free" data-style="light" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+
+	<title>Spring Boot Rocks</title>
+
+	<meta name="description" content="" />
+
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&ampdisplay=swap"
+		rel="stylesheet" />
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+		integrity="sha512-XcIsjKMcuVe0Ucj/xgIXQnytNwBttJbNjltBV18IOnru2lDPe9KRRyvCXw6Y5H415vbBLRm8+q6fmLUU7DfO6Q=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<link th:rel="stylesheet" th:href="@{/css/core.css}" class="template-customizer-core-css" />
+
+	<link rel="stylesheet" th:href="@{/css/theme-default.css}" class="template-customizer-theme-css" />
+	<link rel="stylesheet" th:href="@{/css/demo.css}" />
+	<!-- Page -->
+	<link rel="stylesheet" th:href="@{/css/page-misc.css}" />
+
+	<script th:src="@{/js/helpers.js}"></script>
+	<script th:src="@{/js/config.js}"></script>
+</head>
+
+<body>
+	<!-- Content -->
+
+	<!-- Error -->
+	<div class="misc-wrapper">
+		<h1 class="mb-2 mx-2" style="font-size: 6rem; line-height: 6rem">Error</h1>
+		<h4 class="mb-2">Error Occurred </h4>
+		<div class="d-flex flex-column align-items-center">
+			<div>
+				<a href="/home" th:href="@{/home}" class="btn btn-primary text-center my-6">Back to home</a>
+			</div>
+		</div>
+		<p class="mb-10 mx-2">An error occurred. We are sorry for any inconvenience caused.</p>
+		<div class="d-flex justify-content-center mt-5">
+			<img src="/images/illustrations/tree-3.png" alt="misc-tree"
+				class="img-fluid misc-object d-none d-lg-inline-block" />
+			<img src="/images/illustrations/misc-mask-light.png" alt="misc-error"
+				class="misc-bg d-none d-lg-inline-block" height="172"
+				data-app-light-img="illustrations/misc-mask-light.png"
+				data-app-dark-img="illustrations/misc-mask-dark.png" />
+
+
+
+			<div class="d-flex flex-column align-items-center">
+				<img src="/images/illustrations/404.png" alt="misc-error" class="misc-model img-fluid z-1"
+					width="780" />
+
+			</div>
+		</div>
+	</div>
+	<!-- /Error -->
+
+
+</body>
+
+</html>
