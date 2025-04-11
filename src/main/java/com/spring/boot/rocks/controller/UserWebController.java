@@ -76,6 +76,30 @@ public class UserWebController {
 
 		return "user_list";
 	}
+	
+	@GetMapping("/listuseractive")
+	public String listActiveUser(Model model) {
+		try {
+			model.addAttribute("pagename", "listuseractive");
+			model.addAttribute("users", appUserRepository.findByUserenabledTrue());
+		} catch (Exception e) {
+			model.addAttribute("message", e.getMessage());
+		}
+
+		return "user_list";
+	}
+	
+	@GetMapping("/listuserinactive")
+	public String listInActiveUser(Model model) {
+		try {
+			model.addAttribute("pagename", "listuserinactive");
+			model.addAttribute("users", appUserRepository.findByUserenabledFalse());
+		} catch (Exception e) {
+			model.addAttribute("message", e.getMessage());
+		}
+
+		return "user_list";
+	}
 
 	@GetMapping("/listusers")
 	public String getAll(Model model, @RequestParam(required = false) String keyword,

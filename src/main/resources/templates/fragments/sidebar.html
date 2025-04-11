@@ -131,6 +131,22 @@
 				<div class="badge bg-label-primary fs-tiny rounded-pill ms-auto">Paged</div>
 			</a>
 		</li>
+		
+		<li class="menu-item" th:classappend="${pagename == 'listuseractive' ? 'active' : ''}">
+			<a href="/listuseractive" th:href="@{/listuseractive}" class="menu-link">
+				<i class="menu-icon tf-icons ri-group-line"></i>
+				<div data-i18n="Email">Users</div>
+				<div class="badge bg-label-primary fs-tiny rounded-pill ms-auto">Active</div>
+			</a>
+		</li>
+		
+		<li class="menu-item" th:classappend="${pagename == 'listuserinactive' ? 'active' : ''}">
+			<a href="/listuserinactive" th:href="@{/listuserinactive}" class="menu-link">
+				<i class="menu-icon tf-icons ri-group-line"></i>
+				<div data-i18n="Email">Users</div>
+				<div class="badge bg-label-primary fs-tiny rounded-pill ms-auto">InActive</div>
+			</a>
+		</li>
 
 		<!-- Pages -->
 		<li class="menu-item"
