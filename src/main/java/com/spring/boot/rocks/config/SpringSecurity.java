@@ -49,6 +49,7 @@ public class SpringSecurity {
 		.requestMatchers("/css/**").permitAll()
 		.requestMatchers("/fonts/**").permitAll()
 		.requestMatchers("/js/**").permitAll()
+		.requestMatchers("/swagger-ui/**").permitAll()
 		.anyRequest().authenticated())
 		.formLogin(fL -> fL.loginPage("/login").permitAll().defaultSuccessUrl("/"))
         .exceptionHandling(exception-> exception.accessDeniedPage("/403"))

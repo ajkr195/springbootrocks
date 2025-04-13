@@ -8,7 +8,13 @@ Spring boot 3.4.2, Spring Data JPA, Spring Data REST, Spring Security, Bootstrap
 
 Clone the project in your favorite IDE.
 
-Run Application.java as Spring Boot App. Username is: admin@admin and password is admin@admin
+Run Application.java as Spring Boot App. 
+
+Application URL:
+http://localhost:8080/
+
+Username: admin@admin 
+Password: admin@admin
 
 # What we will accomplish:
 
@@ -27,8 +33,10 @@ Custom 403 / 404 / 500 error pages.
  
 Form Validations using messages from messages.properties files
 
-UI inspired from:
-https://github.com/themeselection/materio-bootstrap-html-admin-template-free
+
+OpenAPI URL
+http://localhost:8080/swagger-ui/index.html
+
 
 <h4> Home </h4>
 
@@ -50,3 +58,6 @@ https://github.com/themeselection/materio-bootstrap-html-admin-template-free
 
 ![springbootrocks](https://github.com/ajkr195/springbootrocks/blob/master/screenshots/Register.JPG)
 
+
+UI inspired from:
+https://github.com/themeselection/materio-bootstrap-html-admin-template-free
